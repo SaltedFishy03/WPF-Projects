@@ -23,11 +23,12 @@ namespace WpfApp1
         public MainWindow()
         {
             InitializeComponent();
+              tb_Navn.Text = "skriv dit navn";
         }
 
         private void Btn_Click(object sender, RoutedEventArgs e)
         {
-
+            MessageBox.Show("hej med dig," + tb_Navn.Text, "hello, world!");
         }
     }
 }

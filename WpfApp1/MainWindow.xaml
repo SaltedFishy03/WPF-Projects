@@ -5,10 +5,25 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Hello, world!" Height="100" Width="340">
     <Grid>
+        <TextBox
+            Name="tb_Navn" 
+            Margin="20,20,0,0" 
+            Width="180"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top">
+        </TextBox>
+        
+        <Button 
+            Margin="220,20,0,0" 
+            Name="btn_SayHello"
+            Content="Say, hello!" 
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Click="Btn_Click">
+        </Button>
+       
 
-        <Button Margin="0, 0, 0, 0" Content="BUTTON" Click="Btn_Click"></Button>
-         
     </Grid>
 </Window>

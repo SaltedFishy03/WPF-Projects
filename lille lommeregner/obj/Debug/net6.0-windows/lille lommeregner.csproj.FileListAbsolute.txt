@@ -1,0 +1,21 @@
+C:\Users\Mathias Schaltz\source\repos\WPF-Projects\lille lommeregner\bin\Debug\net6.0-windows\lille lommeregner.exe
+C:\Users\Mathias Schaltz\source\repos\WPF-Projects\lille lommeregner\bin\Debug\net6.0-windows\lille lommeregner.deps.json
+C:\Users\Mathias Schaltz\source\repos\WPF-Projects\lille lommeregner\bin\Debug\net6.0-windows\lille lommeregner.runtimeconfig.json
+C:\Users\Mathias Schaltz\source\repos\WPF-Projects\lille lommeregner\bin\Debug\net6.0-windows\lille lommeregner.dll
+C:\Users\Mathias Schaltz\source\repos\WPF-Projects\lille lommeregner\bin\Debug\net6.0-windows\lille lommeregner.pdb
+C:\Users\Mathias Schaltz\source\repos\WPF-Projects\lille lommeregner\obj\Debug\net6.0-windows\lille lommeregner.csproj.AssemblyReference.cache
+C:\Users\Mathias Schaltz\source\repos\WPF-Projects\lille lommeregner\obj\Debug\net6.0-windows\MainWindow.g.cs
+C:\Users\Mathias Schaltz\source\repos\WPF-Projects\lille lommeregner\obj\Debug\net6.0-windows\App.g.cs
+C:\Users\Mathias Schaltz\source\repos\WPF-Projects\lille lommeregner\obj\Debug\net6.0-windows\lille lommeregner_MarkupCompile.cache
+C:\Users\Mathias Schaltz\source\repos\WPF-Projects\lille lommeregner\obj\Debug\net6.0-windows\lille lommeregner_MarkupCompile.lref
+C:\Users\Mathias Schaltz\source\repos\WPF-Projects\lille lommeregner\obj\Debug\net6.0-windows\MainWindow.baml
+C:\Users\Mathias Schaltz\source\repos\WPF-Projects\lille lommeregner\obj\Debug\net6.0-windows\lille lommeregner.g.resources
+C:\Users\Mathias Schaltz\source\repos\WPF-Projects\lille lommeregner\obj\Debug\net6.0-windows\lille lommeregner.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Mathias Schaltz\source\repos\WPF-Projects\lille lommeregner\obj\Debug\net6.0-windows\lille lommeregner.AssemblyInfoInputs.cache
+C:\Users\Mathias Schaltz\source\repos\WPF-Projects\lille lommeregner\obj\Debug\net6.0-windows\lille lommeregner.AssemblyInfo.cs
+C:\Users\Mathias Schaltz\source\repos\WPF-Projects\lille lommeregner\obj\Debug\net6.0-windows\lille lommeregner.csproj.CoreCompileInputs.cache
+C:\Users\Mathias Schaltz\source\repos\WPF-Projects\lille lommeregner\obj\Debug\net6.0-windows\lille lommeregner.dll
+C:\Users\Mathias Schaltz\source\repos\WPF-Projects\lille lommeregner\obj\Debug\net6.0-windows\refint\lille lommeregner.dll
+C:\Users\Mathias Schaltz\source\repos\WPF-Projects\lille lommeregner\obj\Debug\net6.0-windows\lille lommeregner.pdb
+C:\Users\Mathias Schaltz\source\repos\WPF-Projects\lille lommeregner\obj\Debug\net6.0-windows\lille lommeregner.genruntimeconfig.cache
+C:\Users\Mathias Schaltz\source\repos\WPF-Projects\lille lommeregner\obj\Debug\net6.0-windows\ref\lille lommeregner.dll

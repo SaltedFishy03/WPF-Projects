@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApp1", "WpfApp1\WpfApp1.csproj", "{561E6DE5-E57F-4536-9093-DE60A03F4DBA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WpfApp1", "WpfApp1\WpfApp1.csproj", "{561E6DE5-E57F-4536-9093-DE60A03F4DBA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lille lommeregner", "lille lommeregner\lille lommeregner.csproj", "{D243BA68-888E-4E5A-80B8-7310F6FCD8D2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{561E6DE5-E57F-4536-9093-DE60A03F4DBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{561E6DE5-E57F-4536-9093-DE60A03F4DBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{561E6DE5-E57F-4536-9093-DE60A03F4DBA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D243BA68-888E-4E5A-80B8-7310F6FCD8D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D243BA68-888E-4E5A-80B8-7310F6FCD8D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D243BA68-888E-4E5A-80B8-7310F6FCD8D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D243BA68-888E-4E5A-80B8-7310F6FCD8D2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
