@@ -28,36 +28,37 @@ namespace lille_lommeregner
 
         private void plus_click(object sender, RoutedEventArgs e)
         {
-            double resultat = RegneFunktion();
+            char sign = 's';
+            double resultat = RegneFunktion(sign);
             tb_resultat.Text = resultat.ToString();
         }
 
-        private double RegneFunktion(char reggneTegn)
+        private double RegneFunktion(char regneTegn)
         {
-            double tal1 = 0;
-            double tal2 = 0;
-            double resultat = 0;
+            double tal1;
+            double tal2;
 
 
 
-            try
+            if (double.TryParse(tb_tal1.Text, out tal1) && double.TryParse(tb_tal2.Text, out tal2))
             {
-                tal1 = Convert.ToDouble(tb_tal1.Text);
-                tal2 = Convert.ToDouble(tb_tal2.Text);
-                resultat = tal1 + tal2;
+                switch (regneTegn)
+                {
+                    case '+':
+                        return tal2 + tal1;
+                    case '-':
+                        return tal2 - tal1;
+                    case '/':
+                        return tal2 / tal1;
+                    case '*':
+                        return tal2 * tal1;
+                    default:
+                        MessageBox.Show("ikke et gyldigt symbol!!");
+                        return 0;
+                }
             }
-            catch (Exception exc)
-            {
-
-                MessageBox.Show("Indtast kun tal!!!", exc.Message);
-
-
-
-
-
-            }
-
-            return resultat;
+            MessageBox.Show("ikke gyldigt tal!!");
+            return 0;
         }
     }
 }
