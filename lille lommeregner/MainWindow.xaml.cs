@@ -28,9 +28,26 @@ namespace lille_lommeregner
 
         private void plus_click(object sender, RoutedEventArgs e)
         {
-            char sign = 's';
+            char sign = '+';
             double resultat = RegneFunktion(sign);
             tb_resultat.Text = resultat.ToString();
+        }
+
+        private void minus_click(object sender, RoutedEventArgs e)
+        {
+            char sing = "-";
+            double resultat = RegneFunktion(sing);
+            tb_resultat.Text = resultat.ToString();
+        }
+
+        private void gange_click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void division_click(object sender, RoutedEventArgs e)
+        {
+
         }
 
         private double RegneFunktion(char regneTegn)
