@@ -5,17 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:lille_lommeregner"
         mc:Ignorable="d"
-        Title="Lille lommerenger" Height="140" Width= "350" MinWidth="350" MinHeight="140">
+        Title="Lille lommerenger" Height="140" Width= "360" MinWidth="350" MinHeight="140">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="auto"/>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
+
         </Grid.ColumnDefinitions>
 
         <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"
+                           />
             <RowDefinition Height="*"/>
             <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
@@ -31,17 +34,18 @@
 
         <TextBlock
             Grid.Row="0"
-            Grid.Column="1"
+            Grid.Column="2"
             Name="symbol"
             VerticalAlignment="Top"
             HorizontalAlignment="Stretch"
             Margin="2,10,2,0"
+            
             Text=""/>
             
 
         <TextBox
             Grid.Row="0"
-            Grid.Column="2"
+            Grid.Column="3"
             Grid.ColumnSpan="2"
             Name="tb_tal2"
             VerticalAlignment="Top"
@@ -52,7 +56,7 @@
            
         <TextBox
             Grid.Row="1"
-            Grid.ColumnSpan="4"
+            Grid.ColumnSpan="5"
             Name="tb_resultat"
             VerticalAlignment="Top"
             HorizontalAlignment="Stretch"
@@ -64,7 +68,7 @@
            Content="+"
            VerticalAlignment="top"
            HorizontalAlignment="right"
-           Margin="0,25,10,0"
+           Margin="5,25,0,0"
            Width= "80"
            Height="20"
            Click="plus_click"/>
@@ -76,7 +80,7 @@
            Content="-"
            VerticalAlignment="top"
            HorizontalAlignment="right"
-           Margin="0,25,10,0"
+           Margin="0,25,0,0"
            Width= "80"
            Height="20"
            Click="minus_click"/>
@@ -84,12 +88,12 @@
 
         <Button
            Grid.Row="2"
-           Grid.Column="2"
+           Grid.Column="3"
            Name ="btn_gange"
            Content="*"
            VerticalAlignment="top"
            HorizontalAlignment="right"
-           Margin="0,25,10,0"
+           Margin="0,25,5,0"
            Width= "80"
            Height="20"
            Click="gange_click"/>
@@ -97,12 +101,11 @@
 
         <Button
            Grid.Row="2"
-           Grid.Column="3"
+           Grid.Column="4"
            Name ="btn_division"
            Content="/"
            VerticalAlignment="top"
-           HorizontalAlignment="right"
-           Margin="0,25,10,0"
+           Margin="0,25,5,0"
            Width= "80"
            Height="20"
            Click="division_click"/>

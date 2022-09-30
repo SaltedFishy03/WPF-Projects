@@ -2,6 +2,8 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
+using System.Net.NetworkInformation;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -30,24 +32,32 @@ namespace lille_lommeregner
         {
             char sign = '+';
             double resultat = RegneFunktion(sign);
+            symbol.Text = sign.ToString();
             tb_resultat.Text = resultat.ToString();
         }
 
         private void minus_click(object sender, RoutedEventArgs e)
         {
-            char sing = "-";
+            char sing = '-';
             double resultat = RegneFunktion(sing);
+            symbol.Text = sing.ToString();
             tb_resultat.Text = resultat.ToString();
         }
 
         private void gange_click(object sender, RoutedEventArgs e)
         {
-
+            char sing = '*';
+            double resultat = RegneFunktion(sing);
+            symbol.Text = sing.ToString();
+            tb_resultat.Text = resultat.ToString();
         }
 
         private void division_click(object sender, RoutedEventArgs e)
         {
-
+            char sing = '/';
+            double resultat = RegneFunktion(sing);
+            symbol.Text = sing.ToString();
+            tb_resultat.Text = resultat.ToString();
         }
 
         private double RegneFunktion(char regneTegn)
@@ -70,6 +80,8 @@ namespace lille_lommeregner
                     case '*':
                         return tal2 * tal1;
                     default:
+
+                        
                         MessageBox.Show("ikke et gyldigt symbol!!");
                         return 0;
                 }
