@@ -23,11 +23,22 @@ namespace lille_lommeregner
     /// </summary>
     public partial class MainWindow : Window
     {
+        Regnetegn regnetegn;
         public MainWindow()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Dette er en enum der definere de oprindelige regnetegn
+        /// </summary>
+        enum Regnetegn
+        {
+            Plus,
+            Minus,
+            Divider,
+            Ganger
+        }
         private void plus_click(object sender, RoutedEventArgs e)
         {
             char sign = '+';
@@ -35,7 +46,7 @@ namespace lille_lommeregner
             symbol.Text = sign.ToString();
             tb_resultat.Text = resultat.ToString();
         }
-
+        
         private void minus_click(object sender, RoutedEventArgs e)
         {
             char sing = '-';
@@ -54,13 +65,15 @@ namespace lille_lommeregner
 
         private void division_click(object sender, RoutedEventArgs e)
         {
-            char sing = '/';
-            double resultat = RegneFunktion(sing);
-            symbol.Text = sing.ToString();
-            tb_resultat.Text = resultat.ToString();
+            RegneFunktion(Regnetegn.Divider);
+
+            //char sing = '/';
+            //double resultat = RegneFunktion(sing);
+            symbol.Text = btn_division.Content.ToString();
+            //tb_resultat.Text = resultat.ToString();
         }
 
-        private double RegneFunktion(char regneTegn)
+        private double RegneFunktion(Regnetegn regnetegn)
         {
             double tal1;
             double tal2;
@@ -69,22 +82,31 @@ namespace lille_lommeregner
 
             if (double.TryParse(tb_tal1.Text, out tal1) && double.TryParse(tb_tal2.Text, out tal2))
             {
-                switch (regneTegn)
+                if (regnetegn == Regnetegn.Divider)
                 {
-                    case '+':
-                        return tal2 + tal1;
-                    case '-':
-                        return tal2 - tal1;
-                    case '/':
-                        return tal2 / tal1;
-                    case '*':
-                        return tal2 * tal1;
-                    default:
+
+
+                }
+
+
+            //    switch (regneTegn)
+            //    {
+            //        case '+':
+            //            return tal2 + tal1;
+            //        case '-':
+            //            return tal2 - tal1;
+            //        case '/':
+            //            return tal2 / tal1;
+            //        case '*':
+            //            return tal2 * tal1;
+            //        default:
 
                         
-                        MessageBox.Show("ikke et gyldigt symbol!!");
-                        return 0;
-                }
+            //            MessageBox.Show("ikke et gyldigt symbol!!");
+            //            return 0;
+            //    }
+
+
             }
             MessageBox.Show("ikke gyldigt tal!!");
             return 0;

@@ -25,16 +25,12 @@ namespace Debbugging
             InitializeComponent();
         }
 
-        private void tb_resultat_Click(object sender, RoutedEventArgs e)
+        private void fejl_Click(object sender, RoutedEventArgs e)
         {
-            int iTal1 = 4;
-            int iTal2 = 0;
-            int iResultat = 0;
-
-            iResultat = iTal1 / iTal2;
-
-            tb_fejl.Text = iResultat.ToString();
-
+            for(int i = 0; i < 10; i++)
+            {
+                tb_fejl.Text += i.ToString() + ",";
+            }
         }
     }
 }

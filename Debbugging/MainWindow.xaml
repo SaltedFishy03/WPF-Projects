@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Debbugging"
         mc:Ignorable="d"
-        Title="MainWindow" Height="200" Width="400" MinHeight="200" MinWidth="400">
+        Title="MainWindow" Height="100" Width="400" MinHeight="100" MinWidth="400">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
@@ -27,8 +27,9 @@
         <Button
             Grid.Column="1"
             Name="tb_resultat"
+            HorizontalAlignment="Stretch"
             Margin="5,10,10,0"
-            Content="Lav fejl" Click="tb_resultat_Click"/>
+            Content="Lav fejl" Click="fejl_Click"/>
             
     </Grid>
 </Window>
