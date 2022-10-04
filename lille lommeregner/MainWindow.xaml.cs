@@ -12,6 +12,7 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
@@ -37,79 +38,68 @@ namespace lille_lommeregner
             Plus,
             Minus,
             Divider,
-            Ganger
+            Gange
         }
         private void plus_click(object sender, RoutedEventArgs e)
         {
-            char sign = '+';
-            double resultat = RegneFunktion(sign);
-            symbol.Text = sign.ToString();
-            tb_resultat.Text = resultat.ToString();
+            symbol.Text = btn_plus.Content.ToString();
+            tb_resultat.Text = RegneFunktion(Regnetegn.Plus).ToString();
         }
-        
+
         private void minus_click(object sender, RoutedEventArgs e)
         {
-            char sing = '-';
-            double resultat = RegneFunktion(sing);
-            symbol.Text = sing.ToString();
-            tb_resultat.Text = resultat.ToString();
+            symbol.Text = btn_minus.Content.ToString();
+            tb_resultat.Text = RegneFunktion(Regnetegn.Minus).ToString();
+
         }
 
         private void gange_click(object sender, RoutedEventArgs e)
         {
-            char sing = '*';
-            double resultat = RegneFunktion(sing);
-            symbol.Text = sing.ToString();
-            tb_resultat.Text = resultat.ToString();
+            symbol.Text = btn_gange.Content.ToString();
+            tb_resultat.Text = RegneFunktion(Regnetegn.Gange).ToString();
         }
 
         private void division_click(object sender, RoutedEventArgs e)
         {
-            RegneFunktion(Regnetegn.Divider);
-
-            //char sing = '/';
-            //double resultat = RegneFunktion(sing);
             symbol.Text = btn_division.Content.ToString();
-            //tb_resultat.Text = resultat.ToString();
-        }
+            tb_resultat.Text = RegneFunktion(Regnetegn.Divider).ToString();
 
+        }
         private double RegneFunktion(Regnetegn regnetegn)
         {
-            double tal1;
-            double tal2;
 
+            double tal1 = 0;
+            double tal2 = 0;
+            double resultat = 0;
 
-
-            if (double.TryParse(tb_tal1.Text, out tal1) && double.TryParse(tb_tal2.Text, out tal2))
+            try
             {
-                if (regnetegn == Regnetegn.Divider)
-                {
-
-
-                }
-
-
-            //    switch (regneTegn)
-            //    {
-            //        case '+':
-            //            return tal2 + tal1;
-            //        case '-':
-            //            return tal2 - tal1;
-            //        case '/':
-            //            return tal2 / tal1;
-            //        case '*':
-            //            return tal2 * tal1;
-            //        default:
-
-                        
-            //            MessageBox.Show("ikke et gyldigt symbol!!");
-            //            return 0;
-            //    }
-
-
+                tal1 = Convert.ToDouble(tb_tal1.Text);
+                tal2 = Convert.ToDouble(tb_tal2.Text);
             }
-            MessageBox.Show("ikke gyldigt tal!!");
-            return 0;
+
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message, "hov...");
+            }
+
+            switch (regnetegn)
+            {
+                case Regnetegn.Plus:
+                    return resultat = tal2 + tal1 ;
+                case Regnetegn.Minus:
+                    return resultat = tal2 - tal1;
+                case Regnetegn.Divider:
+                    return resultat = tal2 / tal1;
+                case Regnetegn.Gange:
+                    return resultat = tal2 * tal1;
+            }
+            return resultat;
+       
         }
+
+
+
     }
 }
+
