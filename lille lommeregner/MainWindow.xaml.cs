@@ -31,7 +31,7 @@ namespace lille_lommeregner
         }
 
         /// <summary>
-        /// Dette er en enum der definere de oprindelige regnetegn
+        /// Dette er en enum der definere de oprindelige regnetegn (altså tjekker om det er det rigtige tegn vi vil bruge)
         /// </summary>
         enum Regnetegn
         {
@@ -40,6 +40,10 @@ namespace lille_lommeregner
             Divider,
             Gange
         }
+
+        /// <summary>
+        /// spørg en
+        /// </summary>
         private void plus_click(object sender, RoutedEventArgs e)
         {
             symbol.Text = btn_plus.Content.ToString();
@@ -71,18 +75,29 @@ namespace lille_lommeregner
             double tal1 = 0;
             double tal2 = 0;
             double resultat = 0;
-
+            
+            /// <summary>
+            /// Try tjekker om tal 1 og tal 2 er et tal (altså prøver og at cenventere tal 1 og 2 til double fra string. 
+            /// </summary>
             try
             {
                 tal1 = Convert.ToDouble(tb_tal1.Text);
                 tal2 = Convert.ToDouble(tb_tal2.Text);
             }
 
+            ///<summary>
+            /// Catch bruger vi tal at fange forventet fejl når vi bruger Exception.
+            /// </summary>
             catch (Exception exc)
             {
                 MessageBox.Show(exc.Message, "hov...");
             }
 
+            ///<summary>
+            /// Switchen her bruger vi tal at tjekke hvilket tegn vi vil bruge. 
+            /// For at tjekke det køre den alle case's med forskellige tegn igennem indtil den finder det rigtige tegn. 
+            /// Hvor den så derefter køre koden i case'en og retunere resultatet
+            /// </summary>
             switch (regnetegn)
             {
                 case Regnetegn.Plus:
