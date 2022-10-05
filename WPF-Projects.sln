@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WpfApp1", "WpfApp1\WpfApp1.csproj", "{561E6DE5-E57F-4536-9093-DE60A03F4DBA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SayHello", "WpfApp1\SayHello.csproj", "{561E6DE5-E57F-4536-9093-DE60A03F4DBA}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lille lommeregner", "lille lommeregner\lille lommeregner.csproj", "{D243BA68-888E-4E5A-80B8-7310F6FCD8D2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Debbugging", "Debbugging\Debbugging.csproj", "{8E75DDC6-CE0B-4775-960B-8891E7E6F483}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Debbugging", "Debbugging\Debbugging.csproj", "{8E75DDC6-CE0B-4775-960B-8891E7E6F483}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
