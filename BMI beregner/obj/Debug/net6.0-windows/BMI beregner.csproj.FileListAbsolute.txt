@@ -1,0 +1,21 @@
+C:\Users\Mathias Schaltz\source\repos\WPF-Projects\BMI beregner\bin\Debug\net6.0-windows\BMI beregner.exe
+C:\Users\Mathias Schaltz\source\repos\WPF-Projects\BMI beregner\bin\Debug\net6.0-windows\BMI beregner.deps.json
+C:\Users\Mathias Schaltz\source\repos\WPF-Projects\BMI beregner\bin\Debug\net6.0-windows\BMI beregner.runtimeconfig.json
+C:\Users\Mathias Schaltz\source\repos\WPF-Projects\BMI beregner\bin\Debug\net6.0-windows\BMI beregner.dll
+C:\Users\Mathias Schaltz\source\repos\WPF-Projects\BMI beregner\bin\Debug\net6.0-windows\BMI beregner.pdb
+C:\Users\Mathias Schaltz\source\repos\WPF-Projects\BMI beregner\obj\Debug\net6.0-windows\BMI beregner.csproj.AssemblyReference.cache
+C:\Users\Mathias Schaltz\source\repos\WPF-Projects\BMI beregner\obj\Debug\net6.0-windows\MainWindow.g.cs
+C:\Users\Mathias Schaltz\source\repos\WPF-Projects\BMI beregner\obj\Debug\net6.0-windows\App.g.cs
+C:\Users\Mathias Schaltz\source\repos\WPF-Projects\BMI beregner\obj\Debug\net6.0-windows\BMI beregner_MarkupCompile.cache
+C:\Users\Mathias Schaltz\source\repos\WPF-Projects\BMI beregner\obj\Debug\net6.0-windows\BMI beregner_MarkupCompile.lref
+C:\Users\Mathias Schaltz\source\repos\WPF-Projects\BMI beregner\obj\Debug\net6.0-windows\MainWindow.baml
+C:\Users\Mathias Schaltz\source\repos\WPF-Projects\BMI beregner\obj\Debug\net6.0-windows\BMI beregner.g.resources
+C:\Users\Mathias Schaltz\source\repos\WPF-Projects\BMI beregner\obj\Debug\net6.0-windows\BMI beregner.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Mathias Schaltz\source\repos\WPF-Projects\BMI beregner\obj\Debug\net6.0-windows\BMI beregner.AssemblyInfoInputs.cache
+C:\Users\Mathias Schaltz\source\repos\WPF-Projects\BMI beregner\obj\Debug\net6.0-windows\BMI beregner.AssemblyInfo.cs
+C:\Users\Mathias Schaltz\source\repos\WPF-Projects\BMI beregner\obj\Debug\net6.0-windows\BMI beregner.csproj.CoreCompileInputs.cache
+C:\Users\Mathias Schaltz\source\repos\WPF-Projects\BMI beregner\obj\Debug\net6.0-windows\BMI beregner.dll
+C:\Users\Mathias Schaltz\source\repos\WPF-Projects\BMI beregner\obj\Debug\net6.0-windows\refint\BMI beregner.dll
+C:\Users\Mathias Schaltz\source\repos\WPF-Projects\BMI beregner\obj\Debug\net6.0-windows\BMI beregner.pdb
+C:\Users\Mathias Schaltz\source\repos\WPF-Projects\BMI beregner\obj\Debug\net6.0-windows\BMI beregner.genruntimeconfig.cache
+C:\Users\Mathias Schaltz\source\repos\WPF-Projects\BMI beregner\obj\Debug\net6.0-windows\ref\BMI beregner.dll
