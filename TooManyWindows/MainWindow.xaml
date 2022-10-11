@@ -1,0 +1,27 @@
+﻿<Window x:Class="TooManyWindows.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TooManyWindows"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="80" Width="700">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="auto"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBox
+            Name="tb_1"
+            Grid.Column="0"
+            Margin="10"/>
+
+        <Button
+            Name="btn_1"
+            Grid.Column="1"
+            Margin="20,10"
+            Width="100"
+            Content="Tryk her!" Click="btn_1_Click"/>
+    </Grid>
+</Window>
