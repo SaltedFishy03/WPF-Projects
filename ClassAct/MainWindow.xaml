@@ -1,0 +1,46 @@
+﻿<Window x:Class="ClassAct.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ClassAct"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="auto"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBox
+            Name="tb_storBox"
+            Grid.Column="0"
+            Grid.Row="0"
+            Grid.RowSpan="2"
+            Margin="5"/>
+
+        <Button
+            Name="bt_create"
+            Grid.Row="0"
+            Grid.Column="1"
+            Content="Create"
+            Width="150"
+            Margin="7" 
+            Click="bt_create_Click"/>
+
+        <Button
+            Name="bt_destroy"
+            Grid.Row="1"
+            Grid.Column="1"
+            Content="Destroy"
+            Width="150"
+            Margin="7" 
+            Click="bt_destroy_Click"/>
+
+    </Grid>
+</Window>
