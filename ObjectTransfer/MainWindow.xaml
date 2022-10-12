@@ -1,0 +1,71 @@
+﻿<Window x:Class="ObjectTransfer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ObjectTransfer"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="250" Width="400">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <TextBlock
+            Grid.Row="0"
+            Grid.Column="0"
+            Margin="20"
+            Text="Fornavn"/>
+
+        <TextBox
+            Name="tb_fornavn1"
+            Grid.Row="0"
+            Grid.Column="1"
+           HorizontalAlignment="Stretch"
+            Margin="10,10,20,10"/>
+
+        <TextBlock
+            Grid.Row="1"
+            Grid.Column="0"
+            Margin="20"
+            Text="Efternavn"/>
+
+        <TextBox
+            Name="tb_efternavn1"
+            Grid.Row="1"
+            Grid.Column="1"
+            Margin="10,10,20,10"/>
+
+        <TextBlock
+            Grid.Row="2"
+            Grid.Column="0"
+            Margin="20"
+            Text="Alder"/>
+        
+        <TextBox
+            Name="Alder1"
+            Grid.Row="2"
+            Grid.Column="1"
+            Margin="10,10,20,10"/>
+
+        <Button
+            Name="btn_overfør"
+            Grid.Row="3"
+            Grid.Column="1"
+            HorizontalAlignment="Right"
+            Margin="0,10,10,10"
+            Width="100"
+            Content="Overfør" Click="btn_overfør_Click"/>
+
+
+
+    </Grid>
+</Window>
