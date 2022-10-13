@@ -32,6 +32,7 @@ namespace TooManyWindows
             tb_1.Text = vindue.Navn;
             vindue.ShowDialog();
 
+
             if (vindue.DialogResult == true)
             {
                 tb_1.Text = "hej med dig " + vindue.Navn;

@@ -55,7 +55,7 @@
             Text="Alder"/>
 
         <TextBox
-            Name="Alder2"
+            Name="tb_alder2"
             Grid.Row="2"
             Grid.Column="1"
             Grid.ColumnSpan="2"
