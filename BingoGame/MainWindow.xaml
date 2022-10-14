@@ -19,12 +19,18 @@
         </Grid.RowDefinitions>
 
         <ListBox
-            Name="lb_usedNumbers"
+            Name="lb_unUsedNumbers"
             Grid.Column="0"
-            Grid.Row="1"
+            Grid.Row="0"
             Grid.RowSpan="2"
             VerticalAlignment="Stretch"
-            Margin="20"/>
+            Margin="20">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding}" />
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
 
         <Button
             Name="btn_pullNumber"
@@ -32,6 +38,28 @@
             Grid.Column="1"
             Margin="20"
             Content="Træk"
+            FontSize="60" Click="btn_pullNumber_Click"/>
+
+
+        <ListBox
+            Name="lb_usedNumbers"
+            Grid.Column="2"
+            Grid.Row="0"
+            Grid.RowSpan="2"
+            VerticalAlignment="Stretch"
+            Margin="20">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding}" />
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+        <Label
+            Name="l_currentNumber"
+            Grid.Column="1"
+            Grid.Row="0"
+            Margin="20"
             FontSize="60"/>
 
 
