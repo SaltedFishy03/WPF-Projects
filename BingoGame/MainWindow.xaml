@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BingoGame"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800" MinWidth="550" MinHeight="300">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -59,6 +59,7 @@
             Name="l_currentNumber"
             Grid.Column="1"
             Grid.Row="0"
+            HorizontalAlignment="Center"
             Margin="20"
             FontSize="60"/>
 

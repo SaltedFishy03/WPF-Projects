@@ -1,0 +1,21 @@
+C:\Users\Mathias Schaltz\source\repos\WPF-Projects\Databinding eksempel\bin\Debug\net6.0-windows\Databinding eksempel.exe
+C:\Users\Mathias Schaltz\source\repos\WPF-Projects\Databinding eksempel\bin\Debug\net6.0-windows\Databinding eksempel.deps.json
+C:\Users\Mathias Schaltz\source\repos\WPF-Projects\Databinding eksempel\bin\Debug\net6.0-windows\Databinding eksempel.runtimeconfig.json
+C:\Users\Mathias Schaltz\source\repos\WPF-Projects\Databinding eksempel\bin\Debug\net6.0-windows\Databinding eksempel.dll
+C:\Users\Mathias Schaltz\source\repos\WPF-Projects\Databinding eksempel\bin\Debug\net6.0-windows\Databinding eksempel.pdb
+C:\Users\Mathias Schaltz\source\repos\WPF-Projects\Databinding eksempel\obj\Debug\net6.0-windows\Databinding eksempel.csproj.AssemblyReference.cache
+C:\Users\Mathias Schaltz\source\repos\WPF-Projects\Databinding eksempel\obj\Debug\net6.0-windows\MainWindow.g.cs
+C:\Users\Mathias Schaltz\source\repos\WPF-Projects\Databinding eksempel\obj\Debug\net6.0-windows\App.g.cs
+C:\Users\Mathias Schaltz\source\repos\WPF-Projects\Databinding eksempel\obj\Debug\net6.0-windows\Databinding eksempel_MarkupCompile.cache
+C:\Users\Mathias Schaltz\source\repos\WPF-Projects\Databinding eksempel\obj\Debug\net6.0-windows\Databinding eksempel_MarkupCompile.lref
+C:\Users\Mathias Schaltz\source\repos\WPF-Projects\Databinding eksempel\obj\Debug\net6.0-windows\MainWindow.baml
+C:\Users\Mathias Schaltz\source\repos\WPF-Projects\Databinding eksempel\obj\Debug\net6.0-windows\Databinding eksempel.g.resources
+C:\Users\Mathias Schaltz\source\repos\WPF-Projects\Databinding eksempel\obj\Debug\net6.0-windows\Databinding eksempel.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Mathias Schaltz\source\repos\WPF-Projects\Databinding eksempel\obj\Debug\net6.0-windows\Databinding eksempel.AssemblyInfoInputs.cache
+C:\Users\Mathias Schaltz\source\repos\WPF-Projects\Databinding eksempel\obj\Debug\net6.0-windows\Databinding eksempel.AssemblyInfo.cs
+C:\Users\Mathias Schaltz\source\repos\WPF-Projects\Databinding eksempel\obj\Debug\net6.0-windows\Databinding eksempel.csproj.CoreCompileInputs.cache
+C:\Users\Mathias Schaltz\source\repos\WPF-Projects\Databinding eksempel\obj\Debug\net6.0-windows\Databinding eksempel.dll
+C:\Users\Mathias Schaltz\source\repos\WPF-Projects\Databinding eksempel\obj\Debug\net6.0-windows\refint\Databinding eksempel.dll
+C:\Users\Mathias Schaltz\source\repos\WPF-Projects\Databinding eksempel\obj\Debug\net6.0-windows\Databinding eksempel.pdb
+C:\Users\Mathias Schaltz\source\repos\WPF-Projects\Databinding eksempel\obj\Debug\net6.0-windows\Databinding eksempel.genruntimeconfig.cache
+C:\Users\Mathias Schaltz\source\repos\WPF-Projects\Databinding eksempel\obj\Debug\net6.0-windows\ref\Databinding eksempel.dll

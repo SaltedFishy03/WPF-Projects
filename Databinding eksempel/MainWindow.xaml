@@ -1,0 +1,25 @@
+﻿<Window x:Class="Databinding_eksempel.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Databinding_eksempel"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+
+        <Label
+            FontStyle="{Binding Path=Value, ElementName=slider}"
+            Content="test!"/>
+
+        <Slider x:Name="slider"
+            Height="auto"
+            Width="auto"
+            MaxHeight="100"
+            MinHeight="10"
+            MaxWidth="100"
+            MinWidth="10"/>
+
+
+    </Grid>
+</Window>
