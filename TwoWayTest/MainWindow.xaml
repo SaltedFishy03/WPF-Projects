@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TwoWayTest"
         mc:Ignorable="d"
-        Title="MainWindow" Height="130" Width="300">
+        Title="MainWindow" Height="250" Width="330">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="auto"/>
@@ -16,6 +16,8 @@
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
         <TextBlock
@@ -69,6 +71,19 @@
             Grid.ColumnSpan="2"
             Grid.Row="3"
             Content="Vis Data" Click="btn_data_Click"/>
+
+        <Button
+            Name="btn_update"
+            Grid.ColumnSpan="2"
+            Grid.Row="4"
+            Content="Update" Click="btn_update_Click"/>
+       
+        <DataGrid 
+            Grid.Row="5" 
+            Grid.ColumnSpan="2"
+            ItemsSource="{Binding}" 
+            AutoGenerateColumns="True"
+            IsReadOnly="True"/>
 
 
 
