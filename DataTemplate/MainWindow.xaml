@@ -7,6 +7,90 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock
+            Name="tbl_fornavn"
+            Grid.Row="0"
+            Grid.Column="0"
+            Margin="0,0,20,5"
+            Text="Fornavn"/>
+
+        <TextBox
+            Name="tb_fornavn"
+            Grid.Row="0"
+            Grid.Column="1"
+            VerticalAlignment="Top"
+            Margin="5,0,0,0"/>
+
+        <TextBlock
+            Name="tbl_efternavn"
+            Grid.Row="1"
+            Grid.Column="0"
+            Margin="0,0,20,5"
+            Text="Efternavn"/>
+
+        <TextBox
+            Name="tb_efternavn"
+            Grid.Row="1"
+            Grid.Column="1"
+            VerticalAlignment="Top"
+            Margin="5,0,0,0"
+            Text="{Binding person.Efternavn}"/>
+
+
+        <TextBlock
+            Name="tbl_formue"
+            Grid.Row="2"
+            Grid.Column="0"
+            Margin="0,0,20,5"
+            Text="Formue"/>
+
+        <TextBox
+            Name="tb_formue"
+            Grid.Row="2"
+            Grid.Column="1"
+            VerticalAlignment="Top"
+            Margin="5,0,0,0"
+            Text="{Binding person.Formue}"/>
+
+        <Button
+            Name="btn_insert"
+            Grid.ColumnSpan="2"
+            Grid.Row="3"
+            Content="Insert" Click="btn_insert_Click" Height="20"/>
+
+        <Button
+            Name="btn_update"
+            Grid.ColumnSpan="2"
+            Grid.Row="4"
+            Content="Update" Click="btn_update_Click"/>
+
+        <Button
+            Name="btn_delete"
+            Grid.ColumnSpan="2"
+            Grid.Row="5"
+            Content="delete" Click="btn_delete_Click"/>
+
+        <DataGrid 
+            Name="dg_personer"
+            Grid.Row="6" 
+            Grid.ColumnSpan="2"
+            ItemsSource="{Binding Personer}" 
+            AutoGenerateColumns="True"
+            IsReadOnly="True"/>
 
     </Grid>
 </Window>
