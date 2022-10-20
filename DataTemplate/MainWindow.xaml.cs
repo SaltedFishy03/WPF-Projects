@@ -49,7 +49,7 @@ namespace DataTemplate
 
         private void btn_delete_Click(object sender, RoutedEventArgs e)
         {
-            Personer.Remove(Personer[dg_personer.SelectedIndex]);           //fra personer listen fjernes der den person som bliver valgt i datagridden 
+           Personer.Remove(Personer[dg_personer.SelectedIndex]);           //fra personer listen fjernes der den person som bliver valgt i datagridden 
             
         }
     }

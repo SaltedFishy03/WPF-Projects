@@ -14,7 +14,11 @@ namespace DataTemplate
         public int ID
         {
             get 
-            { 
+            {
+                for (int i = 0; i > ID; i++)
+                {
+                   
+                }
                 return _id; 
             }
 
