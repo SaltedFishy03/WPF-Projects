@@ -18,6 +18,7 @@
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
@@ -66,27 +67,41 @@
             Margin="5,0,0,0"
             Text="{Binding person.Formue}"/>
 
+        <TextBlock
+            Grid.Row="3"
+            Grid.Column="0"
+            Margin="0,0,20,5"
+            Text="ID nummer"/>
+
+        <TextBox
+            Name="tb_IDNummer"
+            Grid.Row="3"
+            Grid.Column="1"
+            VerticalAlignment="Top"
+            Margin="5,0,0,0"
+            Text="skriv ID nummeret på den person du vil ændre i"/>
+
         <Button
             Name="btn_insert"
             Grid.ColumnSpan="2"
-            Grid.Row="3"
+            Grid.Row="4"
             Content="Insert" Click="btn_insert_Click" Height="20"/>
 
         <Button
             Name="btn_update"
             Grid.ColumnSpan="2"
-            Grid.Row="4"
+            Grid.Row="5"
             Content="Update" Click="btn_update_Click"/>
 
         <Button
             Name="btn_delete"
             Grid.ColumnSpan="2"
-            Grid.Row="5"
+            Grid.Row="6"
             Content="delete" Click="btn_delete_Click"/>
 
         <DataGrid 
             Name="dg_personer"
-            Grid.Row="6" 
+            Grid.Row="7" 
             Grid.ColumnSpan="2"
             ItemsSource="{Binding Personer}" 
             AutoGenerateColumns="True"

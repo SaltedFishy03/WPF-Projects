@@ -8,18 +8,16 @@ using System.Threading.Tasks;
 namespace DataTemplate
 {
 
-    public class Person : INotifyPropertyChanged
+    public class Person : INotifyPropertyChanged                                        //Her er der blevet lavet et interface INottyFyprpertyChanged som siger til client når der er sket en ændringg
     {
+        // I denne propperty laves der et ID
+        // som man bruger til at i denfiticere mellem de forskellige personer 
         public int _id;
         public int ID
         {
             get 
             {
-                for (int i = 0; i > ID; i++)
-                {
-                   
-                }
-                return _id; 
+                return _id;
             }
 
             set 
@@ -27,21 +25,27 @@ namespace DataTemplate
                 _id = value; 
             }
         }
+
+        // I denne propperty laves der et fornavn
+        // som man kan give og skrive til de forskellige personer
         public string? _fornavn;
         public string? Fornavn
         {
             get
             {
-                return _fornavn;
+                return _fornavn;                                                        //ved ikke endnu!!!!!!!
             }
 
             set
             {
-                _fornavn = value;
-                OnPropertyChanged("Fornavn");
+                _fornavn = value;                                                       //ved heller ikke endnu!!!!
+                OnPropertyChanged("Fornavn");                                           // her bliver der brugt en funktion der er lavet længere nede.
+                                                                                        // Den bruges til at når der sker en ændring ved hvilken som helst persons fornavn (i dette tilfælde)
+                                                                                        // Og så laver sender den en notifikation til vores client at der er etfonavn ændret
             }
         }
 
+        // laver det samme som fornavn
         private string _efternavn;
         public string Efternavn
         {
@@ -57,6 +61,7 @@ namespace DataTemplate
             }
         }
 
+        //laver det samme som fornavn
         private int _formue;
         public int Formue
         {
@@ -70,6 +75,8 @@ namespace DataTemplate
                 OnPropertyChanged("Formue");
             }
         }
+
+        // Dette er vores constuckter som fortæller hvordan vores "Person" skal se ud/hvad den skal indeholde  
         public Person(int ID, string Fornavn, string Efternavn, int Formue)
         {
             this.ID = ID;
@@ -77,7 +84,12 @@ namespace DataTemplate
             this.Efternavn = Efternavn;
             this.Formue = Formue;
         }
-        public event PropertyChangedEventHandler? PropertyChanged;
+        public event PropertyChangedEventHandler? PropertyChanged;                  // Dette event arbejder sammen med INortifyPropertyChanged
+                                                                                    // Den gør der kommer besked når der bliver lavet ændringer i property værdierne
+       
+        
+        // Her laves der en funktion til at når der er sket en ændring og er der det
+        // (så køre den noget kode jeg ikke ved hvad rigtig gør!!!!!)
         private void OnPropertyChanged(string PropertyNavn)
         {
             if (PropertyChanged != null)
