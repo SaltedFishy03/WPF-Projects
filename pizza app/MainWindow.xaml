@@ -3,7 +3,9 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:pizza_app"
+        xmlns:local="clr-namespace:pizza_app" 
+        xmlns:data="clr-namespace:pizza_app.database" 
+        d:DataContext="{d:DesignInstance Type=data:DAL}"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
@@ -49,31 +51,34 @@
             FontStyle="Italic"/>
 
 
-        <ListBox Name="lb_pizza" Grid.Row="1" Grid.Column="0" Width="300">
+        <ListBox Name="lb_pizza" Grid.Row="1" Grid.Column="0" Width="300" ItemsSource="{Binding PizzaList}" MouseDoubleClick="lb_pizza_MouseDoubleClick" >
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Grid.Column="1" Grid.Row="0">
-
+                        <TextBlock Text="{Binding Name}" />
+                        <TextBlock Text="{Binding Description}" />
+                        <TextBlock Text="{Binding Price, StringFormat=' $ {0}'}" />
                     </StackPanel>
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
 
-        <ListBox Name="lb_sides" Grid.Row="3" Grid.Column="0" Width="300">
+        <ListBox Name="lb_sides" Grid.Row="3" Grid.Column="0" Width="300" ItemsSource="{Binding SidesList}">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Grid.Row="1" Grid.Column="0">
-                       
+                            <TextBlock Text="{Binding Name}" />
+                        <TextBlock Text="{Binding Price, StringFormat=' $ {0}'}" />
                     </StackPanel>
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
 
-        <ListBox Name="lb_basket" Grid.Row="1" Grid.RowSpan="3" Grid.Column="2" Width="300">
+        <ListBox Name="lb_basket" Grid.Row="1" Grid.RowSpan="3" Grid.Column="2" Width="300" ItemsSource="{Binding Basket}">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Grid.Column="2" Grid.Row="0">
-
+                        
                     </StackPanel>
                 </DataTemplate>
             </ListBox.ItemTemplate>
@@ -87,6 +92,6 @@
             Width="80"
             Height="30"
             HorizontalAlignment="Right"
-            Margin="0,10,10,10"/>
+            Margin="0,10,10,10" Click="btn_buy_Click"/>
     </Grid>
 </Window>

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "XbHNmVudHy1EMjBsaEvJO/TGMZIh65fGFcnqYaOl3F1DCIMQimsNuW0sLrrUQ61ZpjIK1kGmIevr5u1ydvPhJA==",
+  "dgSpecHash": "meQdqgYxMDMZr3rp8BOPMFn3yVMH4rM1fx4Kattgk/UibSM0thc6qnu2MhbzvhgWS2pYvxM90ibeUfJq/2Zn+w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Mathias Schaltz\\Source\\Repos\\WPF-Projects\\TwoWayTest\\TwoWayTest.csproj",
+  "projectFilePath": "C:\\Users\\Mathias Schaltz\\source\\repos\\WPF-Projects\\TwoWayTest\\TwoWayTest.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

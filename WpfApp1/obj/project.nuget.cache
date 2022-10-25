@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "t1gtntPCMMZZAKouHh48ayX4xNppeefF5bbRNryfWdQVb77vgQwOn36Xc6je1gNGqu/79xglMl6X4aVUPRZW8Q==",
+  "dgSpecHash": "7sVGHLHy8NXrzaxPwujFz46KxLzk2QiFB43kTHd1Ekc/swYNhnjX8/s344UJbmyuVDAZFu9VnGh63E8aZLQ7Gw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Mathias Schaltz\\Source\\Repos\\WPF-Projects\\WpfApp1\\SayHello.csproj",
+  "projectFilePath": "C:\\Users\\Mathias Schaltz\\source\\repos\\WPF-Projects\\WpfApp1\\SayHello.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

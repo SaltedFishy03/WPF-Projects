@@ -9,11 +9,17 @@ namespace pizza_app
     public class Pizzaer
     {
         public string Name { get; set; }
+
+        public string Description { get; set; }
         public int Price { get; set; }   
 
-        public Pizzaer(string name, int price)
+        public Pizzaer(string _name, string _desciption, int _price)
         {
-           
+           Name = _name;
+           Description = _desciption; 
+           Price = _price;
+         
+            
         }
     }
 }

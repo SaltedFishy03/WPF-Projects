@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "nqCYcWoUPI3lJCL2Zxrl4ObYogHH7rgci25o2hqWwdBwH7arWoAm6bDjQNT1WlxjXK0Qkr3xwnEt//XxH4wOrA==",
+  "dgSpecHash": "PwXN9wCQCKwTwrXwxbyBbmx6fF8Nn6zjGT5UZQp+0MPJQ0Z+2OdLcXP0ThAHlA2Nv+xns4NZlNVXr7gkG/xSZw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Mathias Schaltz\\Source\\Repos\\WPF-Projects\\ObjectTransfer\\ObjectTransfer.csproj",
+  "projectFilePath": "C:\\Users\\Mathias Schaltz\\source\\repos\\WPF-Projects\\ObjectTransfer\\ObjectTransfer.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

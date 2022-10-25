@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Oqfjro79zBGLEOV/V4SjtprtSHfqMJVDBkm3mQQB0bc/0IyC4xtTp7UONZyL0rD+9uJSMjFMnV77CZsv33bX8A==",
+  "dgSpecHash": "BO2ho1xJ/xIEr25kx11kqiSBecUWhtgVfOmyzmXb7DO6Dqnz2nPT23JCJ0rja9KOvJ4qorC1qRlXomTYJGQ1tA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Mathias Schaltz\\Source\\Repos\\WPF-Projects\\Databinding eksempel\\Databinding eksempel.csproj",
+  "projectFilePath": "C:\\Users\\Mathias Schaltz\\source\\repos\\WPF-Projects\\Databinding eksempel\\Databinding eksempel.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

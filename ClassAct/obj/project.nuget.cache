@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "CygLO7IE2/zdVcbSo/X4+GQg1tb3V9R/G7KlW7cU74zVehQFfvQd7e+7aDDmYAq3YzJDZyGPs9kclGWrOvbttA==",
+  "dgSpecHash": "FCov32Kxh8SoBGoCbRvPdY0T+3q9o9IsQpcCGS6dZmYccMBDnngcbqM1GHcvwOEdL97AjD/YGAKQV8hInr774g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Mathias Schaltz\\Source\\Repos\\WPF-Projects\\ClassAct\\ClassAct.csproj",
+  "projectFilePath": "C:\\Users\\Mathias Schaltz\\source\\repos\\WPF-Projects\\ClassAct\\ClassAct.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

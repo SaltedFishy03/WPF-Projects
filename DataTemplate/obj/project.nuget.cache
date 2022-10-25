@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "6Oz7SU92gCg20c5qunUX/mmuRfh5lCAERtCKRw0mxLu7GOY0HUseKXX9bRUJaGEVg9mOPG+hZ4oo3HQ7R88CTw==",
+  "dgSpecHash": "NF1uwlp3/GOkJC4uzQQ3GfeYR7kyUVxTsNgGew2x5vs12TH33IbA9c63TD5PivOvLPVW0s+IM1Igrgcthh3e4g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Mathias Schaltz\\Source\\Repos\\WPF-Projects\\DataTemplate\\DataTemplate.csproj",
+  "projectFilePath": "C:\\Users\\Mathias Schaltz\\source\\repos\\WPF-Projects\\DataTemplate\\DataTemplate.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

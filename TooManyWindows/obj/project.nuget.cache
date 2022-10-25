@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "J+mv+Toq8HJcO+VZFQT7Hgi8kAazM3SKxeAUNeiugj0jF1YrbYc2KjRUQBtD5D/GfCKI9BLxojw+uKiMtvrM5A==",
+  "dgSpecHash": "zfGqeW5enWrZkM2gWKgzb9kfPtkmF+ieQVBPLWEIrKPckOzQQyGR89BHzyTI/oVIG6kSiIppcjy1Bxyi8EovlA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Mathias Schaltz\\Source\\Repos\\WPF-Projects\\TooManyWindows\\TooManyWindows.csproj",
+  "projectFilePath": "C:\\Users\\Mathias Schaltz\\source\\repos\\WPF-Projects\\TooManyWindows\\TooManyWindows.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
