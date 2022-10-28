@@ -42,5 +42,10 @@ namespace pizza_app
             dal.Basket.Add(new Pizzaer((dal.PizzaList[lb_pizza.SelectedIndex].Name), (dal.PizzaList[lb_pizza.SelectedIndex].Description), (dal.PizzaList[lb_pizza.SelectedIndex].Price)));
 
         }
+        private void lb_sides_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            dal.SideBakset.Add(new Tilbehør(dal.SidesList[lb_sides.SelectedIndex].Name, dal.SidesList[lb_sides.SelectedIndex].Price));
+
+        }
     }
 }

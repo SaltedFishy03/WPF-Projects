@@ -9,9 +9,12 @@ namespace pizza_app
     public class Tilbehør
     {
         public string Name { get; set; }
-        public int Price { get; set; }
 
-        public Tilbehør(string _name, int _price)
+        public string Description { get; set; }
+
+        public double Price { get; set; }
+
+        public Tilbehør(string _name, double _price)
         {
             Name = _name;
             Price = _price;

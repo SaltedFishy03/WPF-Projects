@@ -17,6 +17,8 @@ namespace pizza_app.database
 
         [ObservableProperty] private ObservableCollection<Pizzaer>? _basket;
 
+        [ObservableProperty] private ObservableCollection<Tilbehør> _sideBakset;
+
 
         public DAL()
         {
@@ -34,8 +36,8 @@ namespace pizza_app.database
             SidesList.Add(new Tilbehør("7 Nuggets", 30));
 
             Basket = new ObservableCollection<Pizzaer>();
-            Basket.Add(new Pizzaer("1", "1", 1));
-            
+
+            SideBakset = new ObservableCollection<Tilbehør>();
 
         }
 
