@@ -9,14 +9,17 @@ using System.Xml.Linq;
 
 namespace pizza_app
 {
-    public class Topping
+    public class Toppings
     {
+        public int ID{ get; set; }
+
         public string Name { get; set; }
 
         public double Price { get; set; }
 
-        public Topping(string _name, double _price)
+        public Toppings(int _id, string _name, double _price)
         {
+            ID = _id;
             Name = _name;
             Price = _price;
         }

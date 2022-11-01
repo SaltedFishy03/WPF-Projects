@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,18 +9,21 @@ namespace pizza_app
 {
     public class Pizzaer
     {
+        public int ID { get; set; }
         public string Name { get; set; }
 
         public string Description { get; set; }
 
-        public string Toppings { get; set; }
+        public ObservableCollection<Toppings> Topping { get; set; }
 
         public double Price { get; set; }   
 
-        public Pizzaer(string _name, string _desciption, double _price)
+        public Pizzaer(int _id, string _name, string _desciption, ObservableCollection<Toppings> _topping, double _price)
         {
+           ID = _id;
            Name = _name;
-           Description = _desciption; 
+           Description = _desciption;
+           Topping = _topping;
            Price = _price;
          
             

@@ -11,7 +11,7 @@ namespace DataTemplate
     public class Person : INotifyPropertyChanged                                        //Her er der blevet lavet et interface INottyFyprpertyChanged som siger til client når der er sket en ændringg
     {
         // I denne propperty laves der et ID
-        // som man bruger til at i denfiticere mellem de forskellige personer 
+        // som man bruger til at idenfiticere mellem de forskellige personer 
         public int _id;
         public int ID
         {

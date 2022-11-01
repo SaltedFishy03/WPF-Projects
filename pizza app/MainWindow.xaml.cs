@@ -15,6 +15,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using pizza_app.database;
+using pizza_app.ViewModels;
 
 namespace pizza_app
 {
@@ -24,11 +25,12 @@ namespace pizza_app
     public partial class MainWindow : Window
     {
         static DAL dal = new();
+        MainWindowViewModel mvm = new MainWindowViewModel();
 
         public MainWindow()
         {
             InitializeComponent();
-            DataContext = dal;
+            DataContext = mvm;
 
         }
 
@@ -39,12 +41,13 @@ namespace pizza_app
 
         private void lb_pizza_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            dal.Basket.Add(new Pizzaer((dal.PizzaList[lb_pizza.SelectedIndex].Name), (dal.PizzaList[lb_pizza.SelectedIndex].Description), (dal.PizzaList[lb_pizza.SelectedIndex].Price)));
+            dal.Basket.Add(new Pizzaer(dal.PizzaList[lb_pizza.SelectedIndex].ID, dal.PizzaList[lb_pizza.SelectedIndex].Name, dal.PizzaList[lb_pizza.SelectedIndex].Description, 
+            dal.PizzaList[lb_pizza.SelectedIndex].Topping, dal.PizzaList[lb_pizza.SelectedIndex].Price));
 
         }
         private void lb_sides_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            dal.SideBakset.Add(new Tilbehør(dal.SidesList[lb_sides.SelectedIndex].Name, dal.SidesList[lb_sides.SelectedIndex].Price));
+            dal.SideBakset.Add(new Tilbehør(dal.SidesList[lb_sides.SelectedIndex].ID, dal.SidesList[lb_sides.SelectedIndex].Name, dal.SidesList[lb_sides.SelectedIndex].Description, dal.SidesList[lb_sides.SelectedIndex].Price));
 
         }
     }
