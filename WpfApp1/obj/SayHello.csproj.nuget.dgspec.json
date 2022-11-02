@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Mathias Schaltz\\source\\repos\\WPF-Projects\\WpfApp1\\SayHello.csproj": {}
+    "C:\\Users\\Mathias Schaltz\\Source\\Repos\\WPF-Projects\\WpfApp1\\SayHello.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Mathias Schaltz\\source\\repos\\WPF-Projects\\WpfApp1\\SayHello.csproj": {
+    "C:\\Users\\Mathias Schaltz\\Source\\Repos\\WPF-Projects\\WpfApp1\\SayHello.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Mathias Schaltz\\source\\repos\\WPF-Projects\\WpfApp1\\SayHello.csproj",
+        "projectUniqueName": "C:\\Users\\Mathias Schaltz\\Source\\Repos\\WPF-Projects\\WpfApp1\\SayHello.csproj",
         "projectName": "SayHello",
-        "projectPath": "C:\\Users\\Mathias Schaltz\\source\\repos\\WPF-Projects\\WpfApp1\\SayHello.csproj",
+        "projectPath": "C:\\Users\\Mathias Schaltz\\Source\\Repos\\WPF-Projects\\WpfApp1\\SayHello.csproj",
         "packagesPath": "C:\\Users\\Mathias Schaltz\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Mathias Schaltz\\source\\repos\\WPF-Projects\\WpfApp1\\obj\\",
         "projectStyle": "PackageReference",

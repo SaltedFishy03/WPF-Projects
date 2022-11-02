@@ -19,6 +19,7 @@ namespace pizza_app
 
         public double Price { get; set; }
 
+
         public Order(Pizzaer p)
         {
             ID = p.ID;
@@ -35,6 +36,12 @@ namespace pizza_app
 
 
         }
-
+        public Order(Sides s)
+        {
+            ID = s.ID;
+            Name = s.Name;
+            Description = s.Description;
+            Price = s.Price;
+        }
     }
 }

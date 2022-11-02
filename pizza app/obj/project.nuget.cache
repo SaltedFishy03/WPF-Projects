@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "S8OvzpMfzZofLLyMO+QkwwUt51bxCTc/f7jyz+PTfhaHUNzuSlKwxkJiEJaV62PDKRVRFdtj/joNmPB5jJUfFg==",
+  "dgSpecHash": "+A72NI7IVbEoGPK+j0CNypaHfglBJ/Nmr1pyEmwTeLUjgwuUJSzG4vQtoTozlUtNedrv4yEcO1UJnW4OusVzLA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Mathias Schaltz\\source\\repos\\WPF-Projects\\pizza app\\pizza app.csproj",
+  "projectFilePath": "C:\\Users\\Mathias Schaltz\\Source\\Repos\\WPF-Projects\\pizza app\\pizza app.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Mathias Schaltz\\.nuget\\packages\\communitytoolkit.mvvm\\8.0.0\\communitytoolkit.mvvm.8.0.0.nupkg.sha512"
   ],

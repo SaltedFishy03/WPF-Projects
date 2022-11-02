@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Mathias Schaltz\\source\\repos\\WPF-Projects\\TwoWayTest\\TwoWayTest.csproj": {}
+    "C:\\Users\\Mathias Schaltz\\Source\\Repos\\WPF-Projects\\TwoWayTest\\TwoWayTest.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Mathias Schaltz\\source\\repos\\WPF-Projects\\TwoWayTest\\TwoWayTest.csproj": {
+    "C:\\Users\\Mathias Schaltz\\Source\\Repos\\WPF-Projects\\TwoWayTest\\TwoWayTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Mathias Schaltz\\source\\repos\\WPF-Projects\\TwoWayTest\\TwoWayTest.csproj",
+        "projectUniqueName": "C:\\Users\\Mathias Schaltz\\Source\\Repos\\WPF-Projects\\TwoWayTest\\TwoWayTest.csproj",
         "projectName": "TwoWayTest",
-        "projectPath": "C:\\Users\\Mathias Schaltz\\source\\repos\\WPF-Projects\\TwoWayTest\\TwoWayTest.csproj",
+        "projectPath": "C:\\Users\\Mathias Schaltz\\Source\\Repos\\WPF-Projects\\TwoWayTest\\TwoWayTest.csproj",
         "packagesPath": "C:\\Users\\Mathias Schaltz\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Mathias Schaltz\\source\\repos\\WPF-Projects\\TwoWayTest\\obj\\",
         "projectStyle": "PackageReference",

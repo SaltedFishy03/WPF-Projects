@@ -41,13 +41,27 @@ namespace pizza_app
 
         private void lb_pizza_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            dal.Basket.Add(new Pizzaer(dal.PizzaList[lb_pizza.SelectedIndex].ID, dal.PizzaList[lb_pizza.SelectedIndex].Name, dal.PizzaList[lb_pizza.SelectedIndex].Description, 
-            dal.PizzaList[lb_pizza.SelectedIndex].Topping, dal.PizzaList[lb_pizza.SelectedIndex].Price));
+            mvm.Basket.Add(new Order(dal.PizzaList[lb_pizza.SelectedIndex]));
+
+
+
+
+           // mvm.Baskett.Add(new Order(dal.PizzaList[lb_pizza.SelectedIndex].ID, dal.PizzaList[lb_pizza.SelectedIndex].Name, dal.PizzaList[lb_pizza.SelectedIndex].Description, 
+         //   dal.PizzaList[lb_pizza.SelectedIndex].Topping, dal.PizzaList[lb_pizza.SelectedIndex].Price));
 
         }
         private void lb_sides_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            dal.SideBakset.Add(new Tilbehør(dal.SidesList[lb_sides.SelectedIndex].ID, dal.SidesList[lb_sides.SelectedIndex].Name, dal.SidesList[lb_sides.SelectedIndex].Description, dal.SidesList[lb_sides.SelectedIndex].Price));
+
+            mvm.Basket.Add(new Order(dal.SidesList[lb_sides.SelectedIndex]));
+
+           // dal.SideBakset.Add(new Sides(dal.SidesList[lb_sides.SelectedIndex].ID, dal.SidesList[lb_sides.SelectedIndex].Name, dal.SidesList[lb_sides.SelectedIndex].Description, dal.SidesList[lb_sides.SelectedIndex].Price));
+
+        }
+
+        private void lb_basket_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+           var a =  MessageBox.Show("  ","jijk", MessageBoxButton.YesNo);
 
         }
     }

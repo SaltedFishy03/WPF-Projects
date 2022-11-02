@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace pizza_app
 {
-    public class Tilbehør
+    public class Sides
     {
         public int ID { get; set; }
 
@@ -16,7 +16,7 @@ namespace pizza_app
 
         public double Price { get; set; }
 
-        public Tilbehør(int _id, string _name, string _description, double _price)
+        public Sides(int _id, string _name, string _description, double _price)
         {
             ID = _id;
             Name = _name;

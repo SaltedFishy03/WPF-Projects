@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Mathias Schaltz\\source\\repos\\WPF-Projects\\ClassAct\\ClassAct.csproj": {}
+    "C:\\Users\\Mathias Schaltz\\Source\\Repos\\WPF-Projects\\ClassAct\\ClassAct.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Mathias Schaltz\\source\\repos\\WPF-Projects\\ClassAct\\ClassAct.csproj": {
+    "C:\\Users\\Mathias Schaltz\\Source\\Repos\\WPF-Projects\\ClassAct\\ClassAct.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Mathias Schaltz\\source\\repos\\WPF-Projects\\ClassAct\\ClassAct.csproj",
+        "projectUniqueName": "C:\\Users\\Mathias Schaltz\\Source\\Repos\\WPF-Projects\\ClassAct\\ClassAct.csproj",
         "projectName": "ClassAct",
-        "projectPath": "C:\\Users\\Mathias Schaltz\\source\\repos\\WPF-Projects\\ClassAct\\ClassAct.csproj",
+        "projectPath": "C:\\Users\\Mathias Schaltz\\Source\\Repos\\WPF-Projects\\ClassAct\\ClassAct.csproj",
         "packagesPath": "C:\\Users\\Mathias Schaltz\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Mathias Schaltz\\source\\repos\\WPF-Projects\\ClassAct\\obj\\",
         "projectStyle": "PackageReference",
