@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Mathias Schaltz\\Source\\Repos\\WPF-Projects\\ObjectTransfer\\ObjectTransfer.csproj": {}
+    "C:\\Users\\Mathias Schaltz\\source\\repos\\WPF-Projects\\ObjectTransfer\\ObjectTransfer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Mathias Schaltz\\Source\\Repos\\WPF-Projects\\ObjectTransfer\\ObjectTransfer.csproj": {
+    "C:\\Users\\Mathias Schaltz\\source\\repos\\WPF-Projects\\ObjectTransfer\\ObjectTransfer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Mathias Schaltz\\Source\\Repos\\WPF-Projects\\ObjectTransfer\\ObjectTransfer.csproj",
+        "projectUniqueName": "C:\\Users\\Mathias Schaltz\\source\\repos\\WPF-Projects\\ObjectTransfer\\ObjectTransfer.csproj",
         "projectName": "ObjectTransfer",
-        "projectPath": "C:\\Users\\Mathias Schaltz\\Source\\Repos\\WPF-Projects\\ObjectTransfer\\ObjectTransfer.csproj",
+        "projectPath": "C:\\Users\\Mathias Schaltz\\source\\repos\\WPF-Projects\\ObjectTransfer\\ObjectTransfer.csproj",
         "packagesPath": "C:\\Users\\Mathias Schaltz\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Mathias Schaltz\\source\\repos\\WPF-Projects\\ObjectTransfer\\obj\\",
         "projectStyle": "PackageReference",

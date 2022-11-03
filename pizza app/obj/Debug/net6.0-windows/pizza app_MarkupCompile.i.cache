@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Mathias Schaltz\Source\Repos\WPF-Projects\pizza app\obj\Debug\net6.0-windows\
+C:\Users\Mathias Schaltz\source\repos\WPF-Projects\pizza app\obj\Debug\net6.0-windows\
 pizza_app
 none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
-C:\Users\Mathias Schaltz\Source\Repos\WPF-Projects\pizza app\App.xaml
-11407045341
+C:\Users\Mathias Schaltz\source\repos\WPF-Projects\pizza app\App.xaml
+2228823731
 
-111587628280
+12-1627821901
 195-1388129833
-MainWindow.xaml;
+MainWindow.xaml;ModifyPizza.xaml;
 
 True
 

@@ -10,27 +10,32 @@ namespace pizza_app.database
 {
     public partial class DAL : ObservableObject
     {
-        [ObservableProperty] private ObservableCollection<Toppings> _toppinglist;
+        public ObservableCollection<Toppings> ToppingList { get; set; } = new ObservableCollection<Toppings>();
 
-        [ObservableProperty] private ObservableCollection<Pizzaer>? _pizzaList;
+        public ObservableCollection<Pizzaer> PizzaList { get; set; } = new ObservableCollection<Pizzaer>();
 
-        [ObservableProperty] private ObservableCollection<Sides> _sidesList;
+        public ObservableCollection<Sides> SidesList { get; set; } = new ObservableCollection<Sides>();
+        //[ObservableProperty] private ObservableCollection<Toppings> _toppinglist;
+
+        //[ObservableProperty] private ObservableCollection<Pizzaer>? _pizzaList;
+
+        //[ObservableProperty] private ObservableCollection<Sides> _sidesList;
 
 
 
 
         public DAL()
         {
-            Toppinglist = new ObservableCollection<Toppings>();
-            Toppinglist.Add(new Toppings(1, " Tomatsauce", 5));
-            Toppinglist.Add(new Toppings(2, ", Ost", 5));
-            Toppinglist.Add(new Toppings(3, ", Peperoni", 5));
-            Toppinglist.Add(new Toppings(4, ", Skinke", 5));
-            Toppinglist.Add(new Toppings(5, ", Oskekød", 5));
-            Toppinglist.Add(new Toppings(6, ", Kebab", 10));
-            Toppinglist.Add(new Toppings(7, ", Ananas", 5));
-            Toppinglist.Add(new Toppings(8, ", Salat", 10));
-            Toppinglist.Add(new Toppings(9, ", Hjemmelavet dressing", 5));
+            ToppingList = new ObservableCollection<Toppings>();
+            ToppingList.Add(new Toppings(1, " Tomatsauce", 5));
+            ToppingList.Add(new Toppings(2, ", Ost", 5));
+            ToppingList.Add(new Toppings(3, ", Peperoni", 5));
+            ToppingList.Add(new Toppings(4, ", Skinke", 5));
+            ToppingList.Add(new Toppings(5, ", Oskekød", 5));
+            ToppingList.Add(new Toppings(6, ", Kebab", 10));
+            ToppingList.Add(new Toppings(7, ", Ananas", 5));
+            ToppingList.Add(new Toppings(8, ", Salat", 10));
+            ToppingList.Add(new Toppings(9, ", Hjemmelavet dressing", 5));
 
 
 
@@ -39,12 +44,12 @@ namespace pizza_app.database
 
 
             PizzaList = new ObservableCollection<Pizzaer>();
-            PizzaList.Add(new Pizzaer(1, "Magaritta",$"Dette er vores ostepizza, med",new ObservableCollection<Toppings> {Toppinglist[0], Toppinglist[1]}, 50));
-            PizzaList.Add(new Pizzaer(2, "peperoni", $"dettte er vores klasike peperonipizza, med", new ObservableCollection<Toppings> {Toppinglist[0], Toppinglist[2], Toppinglist[1] }, 50));
-            PizzaList.Add(new Pizzaer(3, "Ham", $"Dette er vores skinkepizza, med", new ObservableCollection<Toppings> {Toppinglist[0], Toppinglist[3], Toppinglist[1]}, 50));
-            PizzaList.Add(new Pizzaer(4, "Hawaii", $"Dette er vores Hawaiipizza, med", new ObservableCollection<Toppings> {Toppinglist[0], Toppinglist[3], Toppinglist[6], Toppinglist[1]}, 10));
-            PizzaList.Add(new Pizzaer(5, "Salatpizza", $"Dette er vores salatpiizza, med", new ObservableCollection<Toppings> { Toppinglist[0], Toppinglist[4], Toppinglist[1], Toppinglist[7], Toppinglist[8]}, 60));
-            PizzaList.Add(new Pizzaer(6, "kebabpizza", $"Dette er vores kebabpizza, med", new ObservableCollection<Toppings>{Toppinglist[0], Toppinglist[5], Toppinglist[1]}, 60));
+            PizzaList.Add(new Pizzaer(1, "Magaritta",$"Dette er vores ostepizza, med",new ObservableCollection<Toppings> {ToppingList[0], ToppingList[1]}, 50));
+            PizzaList.Add(new Pizzaer(2, "Peperoni", $"dettte er vores klasike peperonipizza, med", new ObservableCollection<Toppings> {ToppingList[0], ToppingList[2], ToppingList[1] }, 50));
+            PizzaList.Add(new Pizzaer(3, "Ham", $"Dette er vores skinkepizza, med", new ObservableCollection<Toppings> {ToppingList[0], ToppingList[3], ToppingList[1]}, 50));
+            PizzaList.Add(new Pizzaer(4, "Hawaii", $"Dette er vores Hawaiipizza, med", new ObservableCollection<Toppings> {ToppingList[0], ToppingList[3], ToppingList[6], ToppingList[1]}, 10));
+            PizzaList.Add(new Pizzaer(5, "Salatpizza", $"Dette er vores salatpiizza, med", new ObservableCollection<Toppings> { ToppingList[0], ToppingList[4], ToppingList[1], ToppingList[7], ToppingList[8]}, 60));
+            PizzaList.Add(new Pizzaer(6, "Kebabpizza", $"Dette er vores kebabpizza, med", new ObservableCollection<Toppings>{ToppingList[0], ToppingList[5], ToppingList[1]}, 60));
 
             SidesList = new ObservableCollection<Sides>();
             SidesList.Add(new Sides(1, "Drikkelse", "Sodavand i flere varianter", 25));

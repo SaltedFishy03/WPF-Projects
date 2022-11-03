@@ -16,19 +16,21 @@ namespace pizza_app.ViewModels
         public ObservableCollection<Order> Orders { get; set; } = new ObservableCollection<Order>();
         public ObservableCollection<Order> SideOrder { get; set; } = new ObservableCollection<Order>();
         public ObservableCollection<Order> Basket { get; set; } = new ObservableCollection<Order>();
+        public ObservableCollection<Order> CustomPizza { get; set; } = new ObservableCollection<Order>();
+
 
 
         public MainWindowViewModel()
         {
-            DAL d = new DAL();
-            foreach (var p in d.PizzaList)
+            DAL dal = new DAL();
+            foreach (var pizza in dal.PizzaList)
             {
-                Orders.Add(new Order(p));
+                Orders.Add(new Order(pizza));
             }
 
-            foreach (var s in d.SidesList)
+            foreach (var sides in dal.SidesList)
             {
-                SideOrder.Add(new Order(s));
+                SideOrder.Add(new Order(sides));
             }
 
             

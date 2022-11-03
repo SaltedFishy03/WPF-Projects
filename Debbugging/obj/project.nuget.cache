@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "sOk31iUalZHIjhnPczG+2oAASKpq0fQxDPWAmBwCEm6Ossw0NuE+eVnBMMbKkIqnRxeec0NvsuHLNXw/bf3HhA==",
+  "dgSpecHash": "Q7wDacbDd6Tzjg3eWHLxVoH0DPlI99vq98VZhPXphKTLHqJwpjAvwhvWKDfCZxp6KwNeEPusWEUM7HZvdiOzaA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Mathias Schaltz\\Source\\Repos\\WPF-Projects\\Debbugging\\Debbugging.csproj",
+  "projectFilePath": "C:\\Users\\Mathias Schaltz\\source\\repos\\WPF-Projects\\Debbugging\\Debbugging.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

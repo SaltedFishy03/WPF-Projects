@@ -20,28 +20,28 @@ namespace pizza_app
         public double Price { get; set; }
 
 
-        public Order(Pizzaer p)
+        public Order(Pizzaer pizza)
         {
-            ID = p.ID;
-            Name = p.Name;
-            Description = p.Description;
-            Price = p.Price;
+            ID = pizza.ID;
+            Name = pizza.Name;
+            Description = pizza.Description;
+            Price = pizza.Price;
 
-            foreach (var t in p.Topping)
+            foreach (var toppping in pizza.Topping)
             {
-                Description += t.Name;
-                Price += t.Price;
+                Description += toppping.Name;
+                Price += toppping.Price;
 
             }
 
 
         }
-        public Order(Sides s)
+        public Order(Sides side)
         {
-            ID = s.ID;
-            Name = s.Name;
-            Description = s.Description;
-            Price = s.Price;
+            ID = side.ID;
+            Name = side.Name;
+            Description = side.Description;
+            Price = side.Price;
         }
     }
 }

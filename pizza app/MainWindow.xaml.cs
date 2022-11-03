@@ -46,8 +46,8 @@ namespace pizza_app
 
 
 
-           // mvm.Baskett.Add(new Order(dal.PizzaList[lb_pizza.SelectedIndex].ID, dal.PizzaList[lb_pizza.SelectedIndex].Name, dal.PizzaList[lb_pizza.SelectedIndex].Description, 
-         //   dal.PizzaList[lb_pizza.SelectedIndex].Topping, dal.PizzaList[lb_pizza.SelectedIndex].Price));
+            // mvm.Baskett.Add(new Order(dal.PizzaList[lb_pizza.SelectedIndex].ID, dal.PizzaList[lb_pizza.SelectedIndex].Name, dal.PizzaList[lb_pizza.SelectedIndex].Description, 
+            //   dal.PizzaList[lb_pizza.SelectedIndex].Topping, dal.PizzaList[lb_pizza.SelectedIndex].Price));
 
         }
         private void lb_sides_MouseDoubleClick(object sender, MouseButtonEventArgs e)
@@ -55,14 +55,37 @@ namespace pizza_app
 
             mvm.Basket.Add(new Order(dal.SidesList[lb_sides.SelectedIndex]));
 
-           // dal.SideBakset.Add(new Sides(dal.SidesList[lb_sides.SelectedIndex].ID, dal.SidesList[lb_sides.SelectedIndex].Name, dal.SidesList[lb_sides.SelectedIndex].Description, dal.SidesList[lb_sides.SelectedIndex].Price));
+            // dal.SideBakset.Add(new Sides(dal.SidesList[lb_sides.SelectedIndex].ID, dal.SidesList[lb_sides.SelectedIndex].Name, dal.SidesList[lb_sides.SelectedIndex].Description, dal.SidesList[lb_sides.SelectedIndex].Price));
 
         }
 
         private void lb_basket_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-           var a =  MessageBox.Show("  ","jijk", MessageBoxButton.YesNo);
+            ListBoxItem l = sender as ListBoxItem;
+            if (l != null)
+            {
+                Order o = l.Tag as Order;
+                if (o != null)
+                {
 
+                    MessageBoxResult result = MessageBox.Show("Tryk ja for at modificere din pizza og nej for at slette den. \n\nFor at fortryde tryk på anuller", "Modificer " + o.Name, MessageBoxButton.YesNoCancel);
+                    switch (result)
+                    {
+                        case MessageBoxResult.Yes:
+                            //mvm.CustomPizza.Add(new Order(dal.PizzaList[this.lb_basket.SelectedIndex]));
+                            ModifyPizza ModifyWindow = new ModifyPizza(o);
+                            ModifyWindow.ShowDialog();
+                            break;
+                        case MessageBoxResult.No:
+                            mvm.Basket.Remove(o);
+                            MessageBox.Show("Du har nu fjernet " + o.Name);
+                            break;
+                        case MessageBoxResult.Cancel:
+                            break;
+                    }
+
+                }
+            }
         }
     }
 }

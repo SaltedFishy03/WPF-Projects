@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Mathias Schaltz\\Source\\Repos\\WPF-Projects\\Debbugging\\Debbugging.csproj": {}
+    "C:\\Users\\Mathias Schaltz\\source\\repos\\WPF-Projects\\Debbugging\\Debbugging.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Mathias Schaltz\\Source\\Repos\\WPF-Projects\\Debbugging\\Debbugging.csproj": {
+    "C:\\Users\\Mathias Schaltz\\source\\repos\\WPF-Projects\\Debbugging\\Debbugging.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Mathias Schaltz\\Source\\Repos\\WPF-Projects\\Debbugging\\Debbugging.csproj",
+        "projectUniqueName": "C:\\Users\\Mathias Schaltz\\source\\repos\\WPF-Projects\\Debbugging\\Debbugging.csproj",
         "projectName": "Debbugging",
-        "projectPath": "C:\\Users\\Mathias Schaltz\\Source\\Repos\\WPF-Projects\\Debbugging\\Debbugging.csproj",
+        "projectPath": "C:\\Users\\Mathias Schaltz\\source\\repos\\WPF-Projects\\Debbugging\\Debbugging.csproj",
         "packagesPath": "C:\\Users\\Mathias Schaltz\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Mathias Schaltz\\source\\repos\\WPF-Projects\\Debbugging\\obj\\",
         "projectStyle": "PackageReference",
