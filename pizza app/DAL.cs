@@ -28,14 +28,14 @@ namespace pizza_app.database
         {
             ToppingList = new ObservableCollection<Toppings>();
             ToppingList.Add(new Toppings(1, " Tomatsauce", 5));
-            ToppingList.Add(new Toppings(2, ", Ost", 5));
-            ToppingList.Add(new Toppings(3, ", Peperoni", 5));
-            ToppingList.Add(new Toppings(4, ", Skinke", 5));
-            ToppingList.Add(new Toppings(5, ", Oskekød", 5));
-            ToppingList.Add(new Toppings(6, ", Kebab", 10));
-            ToppingList.Add(new Toppings(7, ", Ananas", 5));
-            ToppingList.Add(new Toppings(8, ", Salat", 10));
-            ToppingList.Add(new Toppings(9, ", Hjemmelavet dressing", 5));
+            ToppingList.Add(new Toppings(2, " Ost", 5));
+            ToppingList.Add(new Toppings(3, " Peperoni", 5));
+            ToppingList.Add(new Toppings(4, " Skinke", 5));
+            ToppingList.Add(new Toppings(5, " Oskekød", 5));
+            ToppingList.Add(new Toppings(6, " Kebab", 10));
+            ToppingList.Add(new Toppings(7, " Ananas", 5));
+            ToppingList.Add(new Toppings(8, " Salat", 10));
+            ToppingList.Add(new Toppings(9, " Hjemmelavet dressing", 5));
 
 
 

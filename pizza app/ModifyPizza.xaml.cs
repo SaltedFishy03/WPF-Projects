@@ -23,14 +23,17 @@ namespace pizza_app
        
         MainWindowViewModel mvm = new MainWindowViewModel();
         private Order o;
+        private Pizzaer pizza;
+       private ModifyPizzaViewModel vm;
 
-    
-
-        public ModifyPizza(Order o)
+       
+        public ModifyPizza(Pizzaer Pizza)
         {
-            this.o = o;
+            pizza = Pizza;
+            vm = new ModifyPizzaViewModel(pizza);
             InitializeComponent();
-            DataContext = o;
+
+            DataContext = vm;
         }
     }
 }

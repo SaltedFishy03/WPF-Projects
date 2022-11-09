@@ -73,8 +73,26 @@ namespace pizza_app
                     {
                         case MessageBoxResult.Yes:
                             //mvm.CustomPizza.Add(new Order(dal.PizzaList[this.lb_basket.SelectedIndex]));
-                            ModifyPizza ModifyWindow = new ModifyPizza(o);
-                            ModifyWindow.ShowDialog();
+
+                            var pizza = dal.PizzaList.Where(p => p.ID == o.ID).FirstOrDefault();
+
+                            //Pizzaer pizza = null;
+                            //foreach (var p in dal.PizzaList)
+                            //{
+                            //    if (p.ID == o.ID)
+                            //    {
+                            //        pizza = p;
+                            //    }
+                            //}
+
+                            if (pizza != null)
+                            {
+                                ModifyPizza ModifyWindow = new ModifyPizza(pizza);
+                                ModifyWindow.ShowDialog();
+                            }
+
+                            //Pizzaer p = new Pizzaer
+                            
                             break;
                         case MessageBoxResult.No:
                             mvm.Basket.Remove(o);

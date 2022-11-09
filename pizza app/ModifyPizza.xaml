@@ -11,9 +11,11 @@
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
         <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
@@ -28,12 +30,31 @@
             FontStyle="Italic"/>
 
 
-        <ListBox Name="lb_pizza" Grid.Row="1" Grid.Column="0" Width="325">
-            <StackPanel>
-                <TextBlock Text="{Binding Name}" />
-                <TextBlock Text="{Binding Description}" />
-                <TextBlock Text="{Binding Price, StringFormat=' $ {0}'}" />
-            </StackPanel>
+        <StackPanel Grid.Row="2" Grid.Column="0" Width="325">
+            <TextBlock Text="{Binding Pizza.Name}" />
+            <TextBlock Text="{Binding Pizza.Price, StringFormat=' $ {0}'}" />
+            <ListBox Name="pizza_topping" Grid.Row="2" Grid.Column="1" Width="325" 
+                     ItemsSource="{Binding Pizza.Topping}">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel >
+                            <TextBlock Text="{Binding Name}" />
+                            <TextBlock Text="{Binding Price, StringFormat=' $ {0}'}" />
+                        </StackPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </StackPanel>
+        <ListBox Name="lb_topping" Grid.Row="2" Grid.Column="1" Width="325" 
+                 ItemsSource="{Binding ToppingList}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel >
+                        <TextBlock Text="{Binding Name}" />
+                        <TextBlock Text="{Binding Price, StringFormat=' $ {0}'}" />
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
         </ListBox>
 
 
