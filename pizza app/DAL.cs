@@ -48,8 +48,8 @@ namespace pizza_app.database
             PizzaList.Add(new Pizzaer(2, "Peperoni", $"dettte er vores klasike peperonipizza, med", new ObservableCollection<Toppings> {ToppingList[0], ToppingList[2], ToppingList[1] }, 50));
             PizzaList.Add(new Pizzaer(3, "Ham", $"Dette er vores skinkepizza, med", new ObservableCollection<Toppings> {ToppingList[0], ToppingList[3], ToppingList[1]}, 50));
             PizzaList.Add(new Pizzaer(4, "Hawaii", $"Dette er vores Hawaiipizza, med", new ObservableCollection<Toppings> {ToppingList[0], ToppingList[3], ToppingList[6], ToppingList[1]}, 10));
-            PizzaList.Add(new Pizzaer(5, "Salatpizza", $"Dette er vores salatpiizza, med", new ObservableCollection<Toppings> { ToppingList[0], ToppingList[4], ToppingList[1], ToppingList[7], ToppingList[8]}, 60));
-            PizzaList.Add(new Pizzaer(6, "Kebabpizza", $"Dette er vores kebabpizza, med", new ObservableCollection<Toppings>{ToppingList[0], ToppingList[5], ToppingList[1]}, 60));
+            PizzaList.Add(new Pizzaer(5, "Salatpizza", $"Dette er vores salatpiizza, med", new ObservableCollection<Toppings> { ToppingList[0], ToppingList[4], ToppingList[1], ToppingList[7], ToppingList[8]}, 50));
+            PizzaList.Add(new Pizzaer(6, "Kebabpizza", $"Dette er vores kebabpizza, med", new ObservableCollection<Toppings>{ToppingList[0], ToppingList[5], ToppingList[1]}, 50));
 
             SidesList = new ObservableCollection<Sides>();
             SidesList.Add(new Sides(1, "Drikkelse", "Sodavand i flere varianter", 25));

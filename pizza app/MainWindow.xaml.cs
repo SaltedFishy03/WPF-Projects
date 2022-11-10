@@ -61,33 +61,48 @@ namespace pizza_app
 
         private void lb_basket_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
+            
+            
             ListBoxItem l = sender as ListBoxItem;
             if (l != null)
             {
                 Order o = l.Tag as Order;
                 if (o != null)
                 {
-
+                   
                     MessageBoxResult result = MessageBox.Show("Tryk ja for at modificere din pizza og nej for at slette den. \n\nFor at fortryde tryk på anuller", "Modificer " + o.Name, MessageBoxButton.YesNoCancel);
                     switch (result)
                     {
                         case MessageBoxResult.Yes:
                             //mvm.CustomPizza.Add(new Order(dal.PizzaList[this.lb_basket.SelectedIndex]));
 
-                            var pizza = dal.PizzaList.Where(p => p.ID == o.ID).FirstOrDefault();
+                            //var pizza = dal.PizzaList.Where(p => p.ID == o.ID).FirstOrDefault();
+                            Sides side = null;
+                            Pizzaer pizza = null;
+                            foreach (var p in dal.PizzaList)
+                            {
+                                if (p.ID == o.ID)
+                                {
+                                    pizza = p;
+                                }
+                            }
 
-                            //Pizzaer pizza = null;
-                            //foreach (var p in dal.PizzaList)
-                            //{
-                            //    if (p.ID == o.ID)
-                            //    {
-                            //        pizza = p;
-                            //    }
-                            //}
+                            foreach (var s in dal.SidesList)
+                            {
+                                if (s.ID == o.ID)
+                                {
+                                    side = s;
+                                }
+                            }
 
                             if (pizza != null)
                             {
-                                ModifyPizza ModifyWindow = new ModifyPizza(pizza);
+                                ModifyPizza ModifyWindow = new(pizza);
+                                ModifyWindow.ShowDialog();
+                            }
+                            else
+                            {
+                                ModifyPizza ModifyWindow = new(side);
                                 ModifyWindow.ShowDialog();
                             }
 

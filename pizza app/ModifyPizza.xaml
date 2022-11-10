@@ -3,8 +3,9 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:pizza_app"
-        
+        xmlns:local="clr-namespace:pizza_app" 
+        xmlns:viewmodels="clr-namespace:pizza_app.ViewModels" 
+        d:DataContext="{d:DesignInstance Type=viewmodels:ModifyPizzaViewModel}"
         mc:Ignorable="d"
 
         Title="ModifyPizza" Height="450" Width="800">
@@ -18,23 +19,35 @@
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
+
+        <Label 
+            Grid.Row="0"
+            Grid.Column="0"
+            HorizontalAlignment="Center"
+            Content="DIN ORDRE"
+            FontSize="20"
+            FontWeight="Heavy"
+            FontStyle="Italic"/>
 
         <Label 
             Grid.Row="0"
             Grid.Column="1"
             HorizontalAlignment="Center"
-            Content="TILPAS DIN ORDRE"
+            Content="TOPPINGS"
             FontSize="20"
             FontWeight="Heavy"
             FontStyle="Italic"/>
 
 
-        <StackPanel Grid.Row="2" Grid.Column="0" Width="325">
-            <TextBlock Text="{Binding Pizza.Name}" />
-            <TextBlock Text="{Binding Pizza.Price, StringFormat=' $ {0}'}" />
-            <ListBox Name="pizza_topping" Grid.Row="2" Grid.Column="1" Width="325" 
-                     ItemsSource="{Binding Pizza.Topping}">
+
+        <StackPanel Grid.Row="1" Grid.Column="0" Width="325">
+            <TextBlock Text="{Binding CustomPizza.Name}" />
+            <TextBlock Text="{Binding CustomPizza.Price, StringFormat=' $ {0}'}" />
+
+            <ListBox Name="lb_pizza_topping" Grid.Row="2" Grid.Column="1" Width="325" Height="300" 
+                     ItemsSource="{Binding CustomPizza.Topping}" MouseDoubleClick="lb_pizza_topping_MouseDoubleClick">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <StackPanel >
@@ -44,9 +57,10 @@
                     </DataTemplate>
                 </ListBox.ItemTemplate>
             </ListBox>
+
         </StackPanel>
-        <ListBox Name="lb_topping" Grid.Row="2" Grid.Column="1" Width="325" 
-                 ItemsSource="{Binding ToppingList}">
+        <ListBox Name="lb_topping" Grid.Row="1" Grid.Column="1" Width="325" Height="300"
+                 ItemsSource="{Binding CustomToppings}" MouseDoubleClick="lb_topping_MouseDoubleClick">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel >
@@ -56,6 +70,15 @@
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
+
+        <Button
+            Grid.Row="3"
+            Width="100"
+            Height="35"
+            Content="DONE"
+            HorizontalAlignment="Left"
+            Margin="15" 
+            Click="Button_Click"/>
 
 
     </Grid>

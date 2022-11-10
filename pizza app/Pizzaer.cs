@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace pizza_app
 {
-    public class Pizzaer
+    public partial class Pizzaer : ObservableObject
     {
         public int ID { get; set; }
         public string Name { get; set; }
@@ -16,7 +17,7 @@ namespace pizza_app
 
         public ObservableCollection<Toppings> Topping { get; set; }
 
-        public double Price { get; set; }   
+        [ObservableProperty] private double _price;  
 
         public Pizzaer(int _id, string _name, string _desciption, ObservableCollection<Toppings> _topping, double _price)
         {
