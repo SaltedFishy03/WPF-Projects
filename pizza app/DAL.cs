@@ -54,8 +54,6 @@ namespace pizza_app.database
             SidesList = new ObservableCollection<Sides>();
             SidesList.Add(new Sides(1, "Drikkelse", "Sodavand i flere varianter", 25));
             SidesList.Add(new Sides(2, "Pommes", "Pomfritter med salt og døbbelse", 25));
-            SidesList.Add(new Sides(3, "7 Nuggets", "hjemmelavet nuggets", 30));
-
 
         }
 

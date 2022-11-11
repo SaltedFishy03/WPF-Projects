@@ -16,6 +16,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using pizza_app.database;
 using pizza_app.ViewModels;
+using System.Runtime.InteropServices;
 
 namespace pizza_app
 {
@@ -61,64 +62,72 @@ namespace pizza_app
 
         private void lb_basket_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            
-            
+
+            Sides side = null;
+            Pizzaer pizza = null;
             ListBoxItem l = sender as ListBoxItem;
             if (l != null)
             {
                 Order o = l.Tag as Order;
                 if (o != null)
-                {
-                   
-                    MessageBoxResult result = MessageBox.Show("Tryk ja for at modificere din pizza og nej for at slette den. \n\nFor at fortryde tryk på anuller", "Modificer " + o.Name, MessageBoxButton.YesNoCancel);
-                    switch (result)
+                {                 
+                    if (lb_pizza.SelectedItem != side)
                     {
-                        case MessageBoxResult.Yes:
-                            //mvm.CustomPizza.Add(new Order(dal.PizzaList[this.lb_basket.SelectedIndex]));
-
-                            //var pizza = dal.PizzaList.Where(p => p.ID == o.ID).FirstOrDefault();
-                            Sides side = null;
-                            Pizzaer pizza = null;
-                            foreach (var p in dal.PizzaList)
-                            {
-                                if (p.ID == o.ID)
+                        MessageBoxResult result = MessageBox.Show("Tryk ja for at modificere din pizza og nej for at slette den. \n\nFor at fortryde tryk på anuller", "Modificer " + o.Name, MessageBoxButton.YesNoCancel);
+                        switch (result)
+                        {
+                            case MessageBoxResult.Yes:
+                                foreach (var p in dal.PizzaList)
                                 {
-                                    pizza = p;
+                                    if (p.ID == o.ID)
+                                    {
+                                        pizza = p;
+                                    }
                                 }
-                            }
 
-                            foreach (var s in dal.SidesList)
-                            {
-                                if (s.ID == o.ID)
-                                {
-                                    side = s;
-                                }
-                            }
-
-                            if (pizza != null)
-                            {
                                 ModifyPizza ModifyWindow = new(pizza);
                                 ModifyWindow.ShowDialog();
-                            }
-                            else
-                            {
-                                ModifyPizza ModifyWindow = new(side);
-                                ModifyWindow.ShowDialog();
-                            }
+                                break;
 
-                            //Pizzaer p = new Pizzaer
-                            
-                            break;
-                        case MessageBoxResult.No:
-                            mvm.Basket.Remove(o);
-                            MessageBox.Show("Du har nu fjernet " + o.Name);
-                            break;
-                        case MessageBoxResult.Cancel:
-                            break;
+                            case MessageBoxResult.No:
+                                mvm.Basket.Remove(o);
+                                MessageBox.Show("Du har nu fjernet " + o.Name);
+                                break;
+
+                            case MessageBoxResult.Cancel:
+                                break;
+                        }
                     }
+                    else
+                    {
+                        MessageBoxResult result = MessageBox.Show("Tryk ja for at få stor størrelse og nej for at slette den. \n\nFor at fortryde tryk på anuller", "Modificer " + o.Name, MessageBoxButton.YesNoCancel);
+                        switch (result)
+                        {
+                            case MessageBoxResult.Yes:
+                                if (o.ID == 1)
+                                {
+                                    o.Price = 30;
+                                }
+                                else
+                                {
+                                    o.Price = 35;
+                                }
 
+                                break;
+
+                            case MessageBoxResult.No:
+                                mvm.Basket.Remove(o);
+                                MessageBox.Show("Du har nu fjernet " + o.Name);
+                                break;
+
+                            case MessageBoxResult.Cancel:
+                                break;
+                        }
+
+                    }
                 }
             }
         }
     }
 }
+
