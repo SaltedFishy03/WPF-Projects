@@ -65,17 +65,34 @@
         </ListBox>
 
         <ListBox Name="lb_sides" Grid.Row="3" Grid.Column="0" Width="325" 
-                 ItemsSource="{Binding SideOrder}" MouseDoubleClick="lb_sides_MouseDoubleClick" >
+                 ItemsSource="{Binding SideOrder}" 
+                 MouseDoubleClick="lb_sides_MouseDoubleClick">
             <ListBox.ItemTemplate>
                 <DataTemplate>
-                    <StackPanel Grid.Row="1" Grid.Column="0">
-                        <TextBlock Text="{Binding Name}" />
-                        <TextBlock Text="{Binding Description}" />
-                        <TextBlock Text="{Binding Price, StringFormat=' $ {0}'}" />
-                    </StackPanel>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <StackPanel Grid.Row="0" Grid.Column="0" HorizontalAlignment="Right">
+                            <TextBlock Text="{Binding Name}" />
+                            <TextBlock Text="{Binding Description}" />
+                            <TextBlock Text="{Binding Price, StringFormat=' $ {0}'}" />
+                        </StackPanel>
+
+                        <StackPanel Margin="10,15,0,0" Grid.Row="0" Grid.Column="1" 
+                                    HorizontalAlignment="Left"  VerticalAlignment="Top" Width="80">
+                            <ComboBox>
+                                <ComboBoxItem>lille (10)</ComboBoxItem>
+                                <ComboBoxItem>mellem (15)</ComboBoxItem>
+                                <ComboBoxItem>stor (20)</ComboBoxItem>
+                            </ComboBox>
+                        </StackPanel>
+                    </Grid>
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
+
 
         <ListBox Name="lb_basket" Grid.Row="1" Grid.RowSpan="3" Grid.Column="2" Width="325" 
                  ItemsSource="{Binding Basket}" >

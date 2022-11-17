@@ -70,7 +70,7 @@ namespace pizza_app
             {
                 Order o = l.Tag as Order;
                 if (o != null)
-                {                 
+                {
                     if (lb_pizza.SelectedItem != side)
                     {
                         MessageBoxResult result = MessageBox.Show("Tryk ja for at modificere din pizza og nej for at slette den. \n\nFor at fortryde tryk på anuller", "Modificer " + o.Name, MessageBoxButton.YesNoCancel);
@@ -107,6 +107,8 @@ namespace pizza_app
                                 if (o.ID == 1)
                                 {
                                     o.Price = 30;
+
+                                   // mvm.Basket = o;
                                 }
                                 else
                                 {
