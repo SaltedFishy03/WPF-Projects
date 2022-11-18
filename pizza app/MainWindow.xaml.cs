@@ -108,7 +108,7 @@ namespace pizza_app
                                 {
                                     o.Price = 30;
 
-                                   // mvm.Basket = o;
+                                    // mvm.Basket = o;
                                 }
                                 else
                                 {
@@ -129,6 +129,11 @@ namespace pizza_app
                     }
                 }
             }
+        }
+
+        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            mvm.Basket.Add(new Order(dal.SidesList[lb_sides.SelectedIndex]));
         }
     }
 }

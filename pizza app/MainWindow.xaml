@@ -82,7 +82,7 @@
 
                         <StackPanel Margin="10,15,0,0" Grid.Row="0" Grid.Column="1" 
                                     HorizontalAlignment="Left"  VerticalAlignment="Top" Width="80">
-                            <ComboBox>
+                            <ComboBox SelectionChanged="ComboBox_SelectionChanged">
                                 <ComboBoxItem>lille (10)</ComboBoxItem>
                                 <ComboBoxItem>mellem (15)</ComboBoxItem>
                                 <ComboBoxItem>stor (20)</ComboBoxItem>
