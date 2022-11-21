@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,12 +17,15 @@ namespace pizza_app
 
         public double Price { get; set; }
 
+        public ObservableCollection<SidesSize> Sizes { get; set; }
+
         public Sides(int _id, string _name, string _description, double _price)
         {
             ID = _id;
             Name = _name;
             Description = _description;
             Price = _price;
+
         }
     }
 

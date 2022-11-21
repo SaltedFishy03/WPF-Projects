@@ -5,10 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:pizza_app" 
         xmlns:data="clr-namespace:pizza_app.database" 
-        d:DataContext="{d:DesignInstance Type=data:DAL}"
+        xmlns:viewmodel="clr-namespace:pizza_app.ViewModels"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="850">
-    <Grid>
+    <!--d:DataContext="{d:DesignInstance Type=data:DAL}"-->
+    <Window.Resources>
+        <viewmodel:MainWindowViewModel x:Key="mvm"></viewmodel:MainWindowViewModel>
+    </Window.Resources>
+
+    <Grid DataContext="{Binding Source={StaticResource mvm}}" >
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="*"/>
@@ -17,38 +22,27 @@
             <RowDefinition Height="auto"/>
 
         </Grid.RowDefinitions>
-
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="auto"/>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="auto"/>
         </Grid.ColumnDefinitions>
 
-        <Label 
-            Grid.Row="0"
-            HorizontalAlignment="Left"
-            Content="PIZZA"
-            FontSize="20"
-            FontWeight="Heavy"
-            FontStyle="Italic"/>
+
+        <Label Grid.Row="0" HorizontalAlignment="Left" Content="PIZZA" FontSize="20"
+            FontWeight="Heavy" FontStyle="Italic"
+               />
 
 
-        <Label 
-            Grid.Row="2"
-            HorizontalAlignment="Left"
-            Content="TILBEHØR"
-            FontSize="20"
-            FontWeight="Heavy"
-            FontStyle="Italic"/>
+        <Label Grid.Row="2" HorizontalAlignment="Left" Content="TILBEHØR" FontSize="20"
+            FontWeight="Heavy" FontStyle="Italic"
+               />
 
-        <Label 
-            Grid.Row="0"
-            Grid.Column="2"
-            HorizontalAlignment="Left"
-            Content="INKØBSKURV"
-            FontSize="20"
-            FontWeight="Heavy"
-            FontStyle="Italic"/>
+        <Label Grid.Row="0" Grid.Column="2" HorizontalAlignment="Left" Content="INKØBSKURV" FontSize="20"
+            FontWeight="Heavy" FontStyle="Italic"
+               />
+
+
 
 
         <ListBox Name="lb_pizza" Grid.Row="1" Grid.Column="0" Width="325" 
@@ -58,7 +52,7 @@
                     <StackPanel Grid.Column="1" Grid.Row="0">
                         <TextBlock Text="{Binding Name}" />
                         <TextBlock Text="{Binding Description}" />
-                        <TextBlock Text="{Binding Price, StringFormat=' $ {0}'}" />
+                        <TextBlock Text="{Binding Price, StringFormat=' {0} kr'}" />
                     </StackPanel>
                 </DataTemplate>
             </ListBox.ItemTemplate>
@@ -77,15 +71,20 @@
                         <StackPanel Grid.Row="0" Grid.Column="0" HorizontalAlignment="Right">
                             <TextBlock Text="{Binding Name}" />
                             <TextBlock Text="{Binding Description}" />
-                            <TextBlock Text="{Binding Price, StringFormat=' $ {0}'}" />
+                            <TextBlock Text="{Binding Price, StringFormat=' {0} kr'}" />
                         </StackPanel>
 
                         <StackPanel Margin="10,15,0,0" Grid.Row="0" Grid.Column="1" 
                                     HorizontalAlignment="Left"  VerticalAlignment="Top" Width="80">
-                            <ComboBox SelectionChanged="ComboBox_SelectionChanged">
-                                <ComboBoxItem>lille (10)</ComboBoxItem>
-                                <ComboBoxItem>mellem (15)</ComboBoxItem>
-                                <ComboBoxItem>stor (20)</ComboBoxItem>
+                            <ComboBox Name="cb_selectSize" SelectionChanged="ComboBox_SelectionChanged" ItemsSource="{Binding SideSize,Source={StaticResource mvm}}">
+                                <ComboBox.ItemTemplate>
+                                    <DataTemplate>
+                                        <StackPanel>
+                                            <TextBlock Text="{Binding Name}"></TextBlock>
+                                            <TextBlock Text="{Binding Price, StringFormat=' {0} kr'}"/>
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </ComboBox.ItemTemplate>
                             </ComboBox>
                         </StackPanel>
                     </Grid>
@@ -102,7 +101,7 @@
                         <StackPanel Grid.Column="2" Grid.Row="0">
                             <TextBlock Text="{Binding Name}" />
                             <TextBlock Text="{Binding Description}" />
-                            <TextBlock Text="{Binding Price, StringFormat=' $ {0}'}" />
+                            <TextBlock Text="{Binding Price, StringFormat=' kr {0}'}" />
                         </StackPanel>
                     </ListBoxItem>
                 </DataTemplate>

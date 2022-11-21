@@ -44,7 +44,7 @@
 
         <StackPanel Grid.Row="1" Grid.Column="0" Width="325">
             <TextBlock Text="{Binding CustomPizza.Name}" />
-            <TextBlock Text="{Binding CustomPizza.Price, StringFormat=' $ {0}'}" />
+            <TextBlock Text="{Binding CustomPizza.Price, StringFormat=' {0} kr'}" />
 
             <ListBox Name="lb_pizza_topping" Grid.Row="2" Grid.Column="1" Width="325" Height="300" 
                      ItemsSource="{Binding CustomPizza.Topping}" MouseDoubleClick="lb_pizza_topping_MouseDoubleClick">
@@ -52,7 +52,7 @@
                     <DataTemplate>
                         <StackPanel >
                             <TextBlock Text="{Binding Name}" />
-                            <TextBlock Text="{Binding Price, StringFormat=' $ {0}'}" />
+                            <TextBlock Text="{Binding Price, StringFormat=' {0} kr'}" />
                         </StackPanel>
                     </DataTemplate>
                 </ListBox.ItemTemplate>
@@ -65,7 +65,7 @@
                 <DataTemplate>
                     <StackPanel >
                         <TextBlock Text="{Binding Name}" />
-                        <TextBlock Text="{Binding Price, StringFormat=' $ {0}'}" />
+                        <TextBlock Text="{Binding Price, StringFormat=' {0} kr'}" />
                     </StackPanel>
                 </DataTemplate>
             </ListBox.ItemTemplate>

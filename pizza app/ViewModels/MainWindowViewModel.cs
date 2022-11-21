@@ -18,6 +18,8 @@ namespace pizza_app.ViewModels
         public ObservableCollection<Order> SideOrder { get; set; } = new ObservableCollection<Order>();
         public ObservableCollection<Order> Basket { get; set; } = new ObservableCollection<Order>();
         public ObservableCollection<Order> CustomPizza { get; set; } = new ObservableCollection<Order>();
+        public ObservableCollection<SidesSize> SideSize { get; set; } = new ObservableCollection<SidesSize>();
+
 
 
         public MainWindowViewModel()
@@ -33,8 +35,11 @@ namespace pizza_app.ViewModels
                 SideOrder.Add(new Order(sides));
             }
 
+            foreach (var i in dal.SidesSizeList)
+            {
+                SideSize.Add(new SidesSize(i));
+            }
 
-            
             //foreach (var s in d.SidesList)
             //{
             //    Orders.Add(new Order(s));

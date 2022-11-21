@@ -31,7 +31,6 @@ namespace pizza_app
         public MainWindow()
         {
             InitializeComponent();
-            DataContext = mvm;
 
         }
 
@@ -133,8 +132,10 @@ namespace pizza_app
 
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            mvm.Basket.Add(new Order(dal.SidesList[lb_sides.SelectedIndex]));
+
         }
+
+
     }
 }
 
