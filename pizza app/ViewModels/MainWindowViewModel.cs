@@ -3,8 +3,10 @@ using pizza_app.database;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Linq;
 using System.Net.Sockets;
+using System.Runtime.CompilerServices;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,7 +18,9 @@ namespace pizza_app.ViewModels
     {
         public ObservableCollection<Order> Orders { get; set; } = new ObservableCollection<Order>();
         public ObservableCollection<Order> SideOrder { get; set; } = new ObservableCollection<Order>();
+
         public ObservableCollection<Order> Basket { get; set; } = new ObservableCollection<Order>();
+
         public ObservableCollection<Order> CustomPizza { get; set; } = new ObservableCollection<Order>();
         public ObservableCollection<SidesSize> SideSize { get; set; } = new ObservableCollection<SidesSize>();
 
@@ -35,9 +39,9 @@ namespace pizza_app.ViewModels
                 SideOrder.Add(new Order(sides));
             }
 
-            foreach (var i in dal.SidesSizeList)
+            foreach (var SizeList in dal.SidesSizeList)
             {
-                SideSize.Add(new SidesSize(i));
+                SideSize.Add(new SidesSize(SizeList));
             }
 
             //foreach (var s in d.SidesList)

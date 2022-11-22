@@ -43,5 +43,11 @@ namespace pizza_app
             Description = side.Description;
             Price = side.Price;
         }
+
+        public Order(string name, double price)
+        {
+            Name = name;
+            Price = price;
+        }
     }
 }

@@ -66,7 +66,7 @@ namespace pizza_app
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+            mvm.Basket.Add(vm)
         }
     }
 }
