@@ -17,17 +17,15 @@ namespace pizza_app
 
         public ObservableCollection<Toppings> Topping { get; set; }
 
-        [ObservableProperty] private double _price;  
+        [ObservableProperty] private double _price;
 
         public Pizzaer(int _id, string _name, string _desciption, ObservableCollection<Toppings> _topping, double _price)
         {
-           ID = _id;
-           Name = _name;
-           Description = _desciption;
-           Topping = _topping;
-           Price = _price;
-         
-            
+            ID = _id;
+            Name = _name;
+            Description = _desciption;
+            Topping = _topping;
+            Price = _price;
         }
     }
 }

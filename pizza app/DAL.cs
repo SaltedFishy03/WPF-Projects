@@ -15,8 +15,9 @@ namespace pizza_app.database
         public ObservableCollection<Pizzaer> PizzaList { get; set; } = new ObservableCollection<Pizzaer>();
 
         public ObservableCollection<Sides> SidesList { get; set; } = new ObservableCollection<Sides>();
+        public ObservableCollection<SidesSize> SideSizeList { get; set; } = new();
 
-        public ObservableCollection<SidesSize> SidesSizeList { get; set; } = new ObservableCollection<SidesSize>();
+        public ObservableCollection<SidesSize> DrinksList { get; set; } = new ObservableCollection<SidesSize>();
         //[ObservableProperty] private ObservableCollection<Toppings> _toppinglist;
 
         //[ObservableProperty] private ObservableCollection<Pizzaer>? _pizzaList;
@@ -53,17 +54,24 @@ namespace pizza_app.database
                 new Pizzaer(6, "Kebabpizza", $"Dette er vores kebabpizza, med", new ObservableCollection<Toppings> { ToppingList[0], ToppingList[5], ToppingList[1] }, 50)
             };
 
-            SidesSizeList = new ObservableCollection<SidesSize>
+            DrinksList = new ObservableCollection<SidesSize>
             {
-                new SidesSize("Lille", 10),
-                new SidesSize("Mellem", 15),
-                new SidesSize("Stor", 20)
+                new SidesSize("Lille", 15),
+                new SidesSize("Mellem", 20),
+                new SidesSize("Stor", 25)
+            };
+
+            SideSizeList = new ObservableCollection<SidesSize>
+            {
+                new SidesSize("Lille", 20),
+                new SidesSize("Mellem", 25),
+                new SidesSize("Stor", 30)
             };
 
             SidesList = new ObservableCollection<Sides>
             {
-                new Sides(1, "Drikkelse", "Sodavand i flere varianter", 25),
-                new Sides(2, "Pommes", "Pomfritter med salt og døbbelse", 25)
+                new Sides(1, "Cola", "Vælg flere forskellige størelser", 25, DrinksList),
+                new Sides(2, "Pommes", "Vælg flere forskellige størelser", 25, SideSizeList)
             };
 
         }

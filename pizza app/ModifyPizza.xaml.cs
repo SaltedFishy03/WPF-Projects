@@ -25,29 +25,19 @@ namespace pizza_app
         MainWindowViewModel mvm = new MainWindowViewModel();
         private Order o;
         private Pizzaer pizza;
-        //private Sides side;
         private ModifyPizzaViewModel vm;
         public DAL dal = new DAL();
 
         public ModifyPizza(Pizzaer Pizza)
         {
+            InitializeComponent();
             pizza = Pizza;
             vm = new ModifyPizzaViewModel(pizza);
-            InitializeComponent();
             vm.GetCustomPrice();
 
             DataContext = vm;
+
         }
-
-        //public ModifyPizza(Sides? Side)
-        //{
-        //    side = Side;
-        //    vm = new ModifyPizzaViewModel(side);
-        //    InitializeComponent();
-
-
-        //    DataContext = vm;
-        //}
 
         private void lb_topping_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
@@ -66,7 +56,9 @@ namespace pizza_app
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            mvm.Basket.Add(vm)
+            mvm.Basket.Add(new Order(vm.CustomPizza));
+            vm.GetCustomPrice();
+            Close();
         }
     }
 }

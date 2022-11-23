@@ -5,10 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:pizza_app" 
         xmlns:data="clr-namespace:pizza_app.database" 
-        xmlns:viewmodel="clr-namespace:pizza_app.ViewModels"
+        xmlns:viewmodel="clr-namespace:pizza_app.ViewModels" 
+        
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="850">
-    <!--d:DataContext="{d:DesignInstance Type=data:DAL}"-->
 
     <Grid>
         <Grid.RowDefinitions>
@@ -54,9 +54,7 @@
             </ListBox.ItemTemplate>
         </ListBox>
 
-        <ListBox Name="lb_sides" Grid.Row="3" Grid.Column="0" Width="325" 
-                 ItemsSource="{Binding SideOrder}" 
-                 MouseDoubleClick="lb_sides_MouseDoubleClick">
+        <ListBox Name="lb_sides" Grid.Row="3" Grid.Column="0" Width="325" ItemsSource="{Binding SideOrder}">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <Grid>
@@ -70,21 +68,20 @@
                             <TextBlock Text="{Binding Price, StringFormat=' {0} kr'}" />
                         </StackPanel>
 
-                        <StackPanel Margin="10,15,0,0" Grid.Row="0" Grid.Column="1" 
-                                    HorizontalAlignment="Left"  VerticalAlignment="Top" Width="80">
-                            <ComboBox Tag="{Binding}" Name="cb_selectSize" SelectionChanged="ComboBox_SelectionChanged" ItemsSource="{Binding SideSize}">
-                                <ComboBox.ItemTemplate>
-                                    <DataTemplate>
-                                        <ComboBoxItem >
-                                            <StackPanel>
-                                                <TextBlock Text="{Binding Name}"/>
-                                                <TextBlock Text="{Binding Price,                                                     StringFormat=' {0} kr'}"/>
-                                            </StackPanel>
-                                        </ComboBoxItem>
-                                    </DataTemplate>
-                                </ComboBox.ItemTemplate>
-                            </ComboBox>
-                        </StackPanel>
+
+                        <ComboBox Margin="10,15,0,0" Grid.Row="0" Grid.Column="1" 
+                                    HorizontalAlignment="Left"  VerticalAlignment="Top" Width="80" Tag="{Binding}" SelectionChanged="SidesSizeChange" ItemsSource="{Binding Size}">
+                            <ComboBox.ItemTemplate>
+                                <DataTemplate>
+
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="{Binding Name}"/>
+                                        <TextBlock Text="{Binding Price, StringFormat=' - {0} kr'}" HorizontalAlignment="Right" TextAlignment="Right"/>
+                                    </StackPanel>
+
+                                </DataTemplate>
+                            </ComboBox.ItemTemplate>
+                        </ComboBox>
                     </Grid>
                 </DataTemplate>
             </ListBox.ItemTemplate>
@@ -96,10 +93,9 @@
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <ListBoxItem Tag="{Binding}" MouseDoubleClick="lb_basket_MouseDoubleClick">
-                        <StackPanel Grid.Column="2" Grid.Row="0">
+                        <StackPanel Orientation="Horizontal" Grid.Column="2" Grid.Row="0" >
                             <TextBlock Text="{Binding Name}" />
-                            <TextBlock Text="{Binding Description}" />
-                            <TextBlock Text="{Binding Price, StringFormat=' kr {0}'}" />
+                            <TextBlock Text="{Binding Price, StringFormat=' - {0} kr'}" />
                         </StackPanel>
                     </ListBoxItem>
                 </DataTemplate>

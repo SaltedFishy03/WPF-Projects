@@ -2,9 +2,12 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
+using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Windows;
+using System.Windows.Controls;
 
 namespace pizza_app
 {
@@ -18,6 +21,8 @@ namespace pizza_app
         public string Description { get; set; }
 
         public double Price { get; set; }
+        public ObservableCollection<SidesSize> Size { get; set; }
+
 
 
         public Order(Pizzaer pizza)
@@ -36,18 +41,23 @@ namespace pizza_app
 
 
         }
+
         public Order(Sides side)
         {
             ID = side.ID;
             Name = side.Name;
             Description = side.Description;
             Price = side.Price;
+            Size = side.Sizes;
         }
 
-        public Order(string name, double price)
+        public Order(string name, string destription, double price)
         {
             Name = name;
             Price = price;
+            Description = destription;
         }
+
+
     }
 }
