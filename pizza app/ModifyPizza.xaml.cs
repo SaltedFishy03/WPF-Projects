@@ -44,7 +44,6 @@ namespace pizza_app
             vm.CustomPizza.Topping.Add(new Toppings(dal.ToppingList[lb_topping.SelectedIndex].ID, dal.ToppingList[lb_topping.SelectedIndex].Name, dal.ToppingList[lb_topping.SelectedIndex].Price));
 
             vm.GetCustomPrice();
-
         }
 
         private void lb_pizza_topping_MouseDoubleClick(object sender, MouseButtonEventArgs e)
@@ -56,8 +55,8 @@ namespace pizza_app
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            mvm.Basket.Add(new Order(vm.CustomPizza));
-            vm.GetCustomPrice();
+            //mvm.Basket.Add(new Order(vm.CustomPizza));
+            //vm.GetCustomPrice();
             Close();
         }
     }

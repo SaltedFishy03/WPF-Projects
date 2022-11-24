@@ -14,21 +14,11 @@ using System.Windows;
 
 namespace pizza_app.ViewModels
 {
-    public class MainWindowViewModel : INotifyPropertyChanged
+    public class MainWindowViewModel
     {
         public ObservableCollection<Order> Orders { get; set; } = new ObservableCollection<Order>();
         public ObservableCollection<Order> SideOrder { get; set; } = new ObservableCollection<Order>();
-
-        //public ObservableCollection<Order> Basket { get; set; } = new ObservableCollection<Order>();
-
-        private ObservableCollection<Order> _basket = new();
-
-        public ObservableCollection<Order> Basket
-        {
-            get { return _basket; }
-            set { _basket = value; OnPropertyChanged("Basket"); }
-        }
-
+        public ObservableCollection<Order> Basket { get; set; } = new ObservableCollection<Order>();
 
         public MainWindowViewModel()
         {
@@ -46,11 +36,5 @@ namespace pizza_app.ViewModels
 
         }
 
-        public event PropertyChangedEventHandler? PropertyChanged;
-
-        protected void OnPropertyChanged([CallerMemberName] string name = null)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
-        }
     }
 }

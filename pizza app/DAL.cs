@@ -8,24 +8,16 @@ using CommunityToolkit.Mvvm.ComponentModel;
 
 namespace pizza_app.database
 {
-    public partial class DAL : ObservableObject
+    public partial class DAL
     {
-        public ObservableCollection<Toppings> ToppingList { get; set; } = new ObservableCollection<Toppings>();
+        public ObservableCollection<Toppings> ToppingList { get; set; } = new();
 
-        public ObservableCollection<Pizzaer> PizzaList { get; set; } = new ObservableCollection<Pizzaer>();
+        public ObservableCollection<Pizzaer> PizzaList { get; set; } = new();
 
-        public ObservableCollection<Sides> SidesList { get; set; } = new ObservableCollection<Sides>();
+        public ObservableCollection<Sides> SidesList { get; set; } = new();
         public ObservableCollection<SidesSize> SideSizeList { get; set; } = new();
 
-        public ObservableCollection<SidesSize> DrinksList { get; set; } = new ObservableCollection<SidesSize>();
-        //[ObservableProperty] private ObservableCollection<Toppings> _toppinglist;
-
-        //[ObservableProperty] private ObservableCollection<Pizzaer>? _pizzaList;
-
-        //[ObservableProperty] private ObservableCollection<Sides> _sidesList;
-
-
-
+        public ObservableCollection<SidesSize> DrinksList { get; set; } = new();
 
         public DAL()
         {

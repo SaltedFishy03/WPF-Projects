@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
@@ -12,7 +13,7 @@ using System.Windows.Controls;
 namespace pizza_app
 {
 
-    public class Order
+    public partial class Order : ObservableObject
     {
         public int ID { get; set; }
 
@@ -20,17 +21,19 @@ namespace pizza_app
 
         public string Description { get; set; }
 
-        public double Price { get; set; }
+        [ObservableProperty] private double _price;
         public ObservableCollection<SidesSize> Size { get; set; }
-
+        private Pizzaer _pizza;
 
 
         public Order(Pizzaer pizza)
         {
+            _pizza = new Pizzaer(pizza.ID, pizza.Name, pizza.Description, new ObservableCollection<Toppings>(pizza.Topping), pizza.Price);
+            pizza.PropertyChanged += Pizza_PropertyChanged;
             ID = pizza.ID;
             Name = pizza.Name;
             Description = pizza.Description;
-            Price = pizza.Price;
+            Price = 50;
 
             foreach (var toppping in pizza.Topping)
             {
@@ -40,6 +43,11 @@ namespace pizza_app
             }
 
 
+        }
+
+        private void Pizza_PropertyChanged(object? sender, System.ComponentModel.PropertyChangedEventArgs e)
+        {
+            Price = _pizza.Price;
         }
 
         public Order(Sides side)
