@@ -1,4 +1,5 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
+using pizza_app.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -15,6 +16,7 @@ namespace pizza_app
 
     public partial class Order : ObservableObject
     {
+
         public int ID { get; set; }
 
         public string Name { get; set; }
@@ -29,11 +31,11 @@ namespace pizza_app
         public Order(Pizzaer pizza)
         {
             _pizza = new Pizzaer(pizza.ID, pizza.Name, pizza.Description, new ObservableCollection<Toppings>(pizza.Topping), pizza.Price);
-            pizza.PropertyChanged += Pizza_PropertyChanged;
             ID = pizza.ID;
             Name = pizza.Name;
             Description = pizza.Description;
             Price = 50;
+
 
             foreach (var toppping in pizza.Topping)
             {
@@ -41,13 +43,14 @@ namespace pizza_app
                 Price += toppping.Price;
 
             }
-
+            pizza.PropertyChanged += Pizza_PropertyChanged;
 
         }
 
         private void Pizza_PropertyChanged(object? sender, System.ComponentModel.PropertyChangedEventArgs e)
         {
-            Price = _pizza.Price;
+            _pizza.Price = Price;
+
         }
 
         public Order(Sides side)
