@@ -12,7 +12,7 @@ namespace pizza_app.ViewModels
 
         public ObservableCollection<Toppings> CustomToppings { get; set; }
 
-        public ModifyPizzaViewModel(Pizzaer pizza)
+        public ModifyPizzaViewModel(Order pizza)
         {
             CustomToppings = dal.ToppingList;
             CustomPizza = pizza;

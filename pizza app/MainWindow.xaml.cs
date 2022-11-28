@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.ObjectModel;
+using System.Runtime.InteropServices;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -14,7 +16,7 @@ namespace pizza_app
     public partial class MainWindow : Window
     {
         static DAL dal = new();
-        MainWindowViewModel mvm = new MainWindowViewModel();
+        MainWindowViewModel mvm = new();
 
         public MainWindow()
         {
@@ -34,6 +36,7 @@ namespace pizza_app
         {
             mvm.Basket.Add(new Order(dal.PizzaList[lb_pizza.SelectedIndex]));
         }
+
 
         private void lb_basket_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
@@ -60,6 +63,7 @@ namespace pizza_app
 
                                 ModifyPizza ModifyWindow = new(pizza);
                                 ModifyWindow.ShowDialog();
+
                                 break;
 
                             case MessageBoxResult.No:

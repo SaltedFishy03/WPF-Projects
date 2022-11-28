@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Controls.Primitives;
 
 namespace pizza_app
 {
@@ -24,11 +25,12 @@ namespace pizza_app
         public string Description { get; set; }
 
         [ObservableProperty] private double _price;
+        public ObservableCollection<Toppings> Topping { get; set; }
         public ObservableCollection<SidesSize> Size { get; set; }
         private Pizzaer _pizza;
 
 
-        public Order(Pizzaer pizza)
+        public Order(Order pizza)
         {
             _pizza = new Pizzaer(pizza.ID, pizza.Name, pizza.Description, new ObservableCollection<Toppings>(pizza.Topping), pizza.Price);
             ID = pizza.ID;

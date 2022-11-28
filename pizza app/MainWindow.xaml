@@ -5,8 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:pizza_app" 
         xmlns:data="clr-namespace:pizza_app.database" 
-        xmlns:viewmodel="clr-namespace:pizza_app.ViewModels" 
-        
+        xmlns:viewmodel="clr-namespace:pizza_app.ViewModels"    
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="850">
 

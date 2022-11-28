@@ -2,6 +2,7 @@
 using pizza_app.ViewModels;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,13 +23,13 @@ namespace pizza_app
     public partial class ModifyPizza : Window
     {
 
-        MainWindowViewModel mvm = new MainWindowViewModel();
-        private Order o;
-        private Pizzaer pizza;
+        MainWindowViewModel mvm = new();
         private ModifyPizzaViewModel vm;
+        private Order o;
+        private Order pizza;
         public DAL dal = new DAL();
 
-        public ModifyPizza(Pizzaer Pizza)
+        public ModifyPizza(Order Pizza)
         {
             InitializeComponent();
             pizza = Pizza;
@@ -38,6 +39,8 @@ namespace pizza_app
             DataContext = vm;
 
         }
+
+
 
         private void lb_topping_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
@@ -55,8 +58,16 @@ namespace pizza_app
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+
+            mvm.Basket.Add(pizza);
             //mvm.Basket.Add(new Order(vm.CustomPizza));
             //vm.GetCustomPrice();
+
+            Close();
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
             Close();
         }
     }
