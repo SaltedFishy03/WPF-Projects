@@ -25,11 +25,10 @@ namespace pizza_app
 
         MainWindowViewModel mvm = new();
         private ModifyPizzaViewModel vm;
-        private Order o;
-        private Order pizza;
+        private Pizzaer pizza;
         public DAL dal = new DAL();
 
-        public ModifyPizza(Order Pizza)
+        public ModifyPizza(Pizzaer Pizza)
         {
             InitializeComponent();
             pizza = Pizza;
@@ -58,10 +57,8 @@ namespace pizza_app
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
-            mvm.Basket.Add(pizza);
-            //mvm.Basket.Add(new Order(vm.CustomPizza));
-            //vm.GetCustomPrice();
+            mvm.Basket.Add(new Order(vm.CustomPizza));
+            vm.GetCustomPrice();
 
             Close();
         }

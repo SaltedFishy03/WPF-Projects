@@ -26,6 +26,18 @@ namespace pizza_app
             Description = _desciption;
             Topping = _topping;
             Price = _price;
+
+            //foreach (var topping in Topping)
+            //{
+            //    Description += topping.Name;
+            //    Price += topping.Price;
+
+            //}
         }
+
+
+
     }
+
 }
+

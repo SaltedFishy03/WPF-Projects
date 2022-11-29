@@ -10,7 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Controls.Primitives;
+using System.Windows.Media;
 
 namespace pizza_app
 {
@@ -25,29 +25,56 @@ namespace pizza_app
         public string Description { get; set; }
 
         [ObservableProperty] private double _price;
-        public ObservableCollection<Toppings> Topping { get; set; }
         public ObservableCollection<SidesSize> Size { get; set; }
+
         private Pizzaer _pizza;
 
+        public ObservableCollection<Toppings> Topping { get; set; } = new();
 
-        public Order(Order pizza)
+
+
+
+        public Order DeepCopy(Pizzaer pizza)
         {
-            _pizza = new Pizzaer(pizza.ID, pizza.Name, pizza.Description, new ObservableCollection<Toppings>(pizza.Topping), pizza.Price);
-            ID = pizza.ID;
-            Name = pizza.Name;
-            Description = pizza.Description;
-            Price = 50;
+            Order PizzaCopy = new Order(ID, Name, Description, new ObservableCollection<Toppings>(Topping), Price);
+            ID = PizzaCopy.ID;
+            Name = PizzaCopy.Name;
+            Description = PizzaCopy.Description;
+            Price = PizzaCopy.Price;
 
-
-            foreach (var toppping in pizza.Topping)
+            foreach (var toppping in PizzaCopy.Topping)
             {
                 Description += toppping.Name;
                 Price += toppping.Price;
 
             }
-            pizza.PropertyChanged += Pizza_PropertyChanged;
+            PropertyChanged += Pizza_PropertyChanged;
+
+            return PizzaCopy;
 
         }
+
+
+
+
+        //public Order(Pizzaer pizza)
+        //{
+        //    _pizza = new Pizzaer(pizza.ID, pizza.Name, pizza.Description, new ObservableCollection<Toppings>(pizza.Topping), pizza.Price);
+        //    ID = pizza.ID;
+        //    Name = pizza.Name;
+        //    Description = pizza.Description;
+        //    Price = 50;
+
+
+        //    foreach (var toppping in pizza.Topping)
+        //    {
+        //        Description += toppping.Name;
+        //        Price += toppping.Price;
+
+        //    }
+        //    pizza.PropertyChanged += Pizza_PropertyChanged;
+
+        //}
 
         private void Pizza_PropertyChanged(object? sender, System.ComponentModel.PropertyChangedEventArgs e)
         {
@@ -69,6 +96,15 @@ namespace pizza_app
             Name = name;
             Price = price;
             Description = destription;
+        }
+
+        private Order(int _id, string _name, string _destription, ObservableCollection<Toppings> _toppings, double _price)
+        {
+            ID = _id;
+            Name = _name;
+            Description = _destription;
+            Topping = _toppings;
+            Price = _price;
         }
 
 

@@ -63,7 +63,6 @@ namespace pizza_app
 
                                 ModifyPizza ModifyWindow = new(pizza);
                                 ModifyWindow.ShowDialog();
-
                                 break;
 
                             case MessageBoxResult.No:
@@ -98,11 +97,11 @@ namespace pizza_app
         private void SidesSizeChange(object sender, SelectionChangedEventArgs e)
         {
             ComboBox? c = sender as ComboBox;
-            if (c.Tag is Order s)
+            if (c.Tag is Order o)
             {
                 if (c.SelectedValue is SidesSize p)
                 {
-                    mvm.Basket.Add(new Order(s.Name, s.Description, p.Price));
+                    mvm.Basket.Add(new Order(o.Name, o.Description, o.Price));
                 }
             }
         }
