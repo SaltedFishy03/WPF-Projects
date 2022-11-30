@@ -19,12 +19,11 @@ namespace pizza_app
 
         public ObservableCollection<SidesSize> Sizes { get; set; }
 
-        public Sides(int _id, string _name, string _description, double _price, ObservableCollection<SidesSize> size)
+        public Sides(int _id, string _name, string _description, ObservableCollection<SidesSize> size)
         {
             ID = _id;
             Name = _name;
             Description = _description;
-            Price = _price;
             Sizes = size;
 
         }

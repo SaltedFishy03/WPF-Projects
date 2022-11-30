@@ -21,7 +21,6 @@ namespace pizza_app.ViewModels
         //public ObservableCollection<Order> Basket { get; set; } = new ObservableCollection<Order>();
 
         public static ObservableCollection<Order> _basket = new();
-
         public ObservableCollection<Order> Basket
         {
             get { return _basket; }
@@ -34,16 +33,21 @@ namespace pizza_app.ViewModels
         {
             DAL dal = new DAL();
 
-            foreach (var pizza in dal.PizzaList)
+            for (int i = 0; i < dal.PizzaList.Count; i++)
             {
-                Orders.Add(new Order(pizza));
+                Orders.Add(new Order(dal.PizzaList[i]).Clone() as Order);
             }
+
+            //foreach (var pizza in dal.PizzaList)
+            //{
+            //    Orders.Add(new Order(pizza));
+            //}
 
             foreach (var sides in dal.SidesList)
             {
                 SideOrder.Add(new Order(sides));
+                //.Clone() as Order
             }
-
         }
 
         public event PropertyChangedEventHandler? PropertyChanged;

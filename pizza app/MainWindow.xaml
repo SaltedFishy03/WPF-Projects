@@ -64,7 +64,7 @@
                         <StackPanel Grid.Row="0" Grid.Column="0" HorizontalAlignment="Right">
                             <TextBlock Text="{Binding Name}" />
                             <TextBlock Text="{Binding Description}" />
-                            <TextBlock Text="{Binding Price, StringFormat=' {0} kr'}" />
+                            <!--<TextBlock Text="{Binding Price, StringFormat=' {0} kr'}" />-->
                         </StackPanel>
 
 

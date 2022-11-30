@@ -11,7 +11,7 @@ namespace pizza_app
 {
     public class Toppings
     {
-        public int ID{ get; set; }
+        public int ID { get; set; }
 
         public string Name { get; set; }
 
@@ -38,4 +38,5 @@ namespace pizza_app
     //    Olives,
     //    pineable
     //}
+
 }

@@ -15,7 +15,7 @@ namespace pizza_app
     /// </summary>
     public partial class MainWindow : Window
     {
-        static DAL dal = new();
+        DAL dal = new();
         MainWindowViewModel mvm = new();
 
         public MainWindow()
@@ -34,7 +34,9 @@ namespace pizza_app
 
         private void lb_pizza_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            mvm.Basket.Add(new Order(dal.PizzaList[lb_pizza.SelectedIndex]));
+            mvm.Basket.Add(new Order().Clone() as Order);
+
+            //MessageBox.Show($"{lb_pizza.SelectedItem.GetHashCode()}");
         }
 
 
@@ -43,10 +45,13 @@ namespace pizza_app
             Sides side = null;
             Pizzaer pizza = null;
             ListBoxItem? l = sender as ListBoxItem;
+
             if (l != null)
             {
                 if (l.Tag is Order o)
                 {
+                    // MessageBox.Show($"{lb_pizza.SelectedItem.GetHashCode()}");
+
                     if (lb_pizza.SelectedItem != side)
                     {
                         MessageBoxResult result = MessageBox.Show("Tryk ja for at modificere din pizza og nej for at slette den. \n\nFor at fortryde tryk på anuller", "Modificer " + o.Name, MessageBoxButton.YesNoCancel);
@@ -76,7 +81,7 @@ namespace pizza_app
                     }
                     else
                     {
-                        MessageBoxResult result = MessageBox.Show("Har du lyst til at fjerne", "Fjern " + o.Name, MessageBoxButton.YesNo);
+                        MessageBoxResult result = MessageBox.Show("Har du lyst til at fjerne " + o.Name, "Fjern " + o.Name, MessageBoxButton.YesNo);
                         switch (result)
                         {
 
@@ -99,9 +104,10 @@ namespace pizza_app
             ComboBox? c = sender as ComboBox;
             if (c.Tag is Order o)
             {
-                if (c.SelectedValue is SidesSize p)
+                if (c.SelectedValue is SidesSize s)
                 {
-                    mvm.Basket.Add(new Order(o.Name, o.Description, o.Price));
+                    mvm.Basket.Add(new Order(o.Name, string.Empty, s.Price));
+
                 }
             }
         }

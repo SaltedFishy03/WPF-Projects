@@ -62,8 +62,8 @@ namespace pizza_app.database
 
             SidesList = new ObservableCollection<Sides>
             {
-                new Sides(1, "Cola", "Vælg flere forskellige størelser", 25, DrinksList),
-                new Sides(2, "Pommes", "Vælg flere forskellige størelser", 25, SideSizeList)
+                new Sides(1, "Cola", "Vælg flere forskellige størelser", DrinksList),
+                new Sides(2, "Pommes", "Vælg flere forskellige størelser", SideSizeList)
             };
 
         }
