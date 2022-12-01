@@ -31,6 +31,9 @@ namespace pizza_app
 
         public ObservableCollection<Toppings> Topping { get; set; } = new();
 
+        private Order PizzaCopy;
+
+
         public Order(Pizzaer PizzaCopy)
         {
 
@@ -40,11 +43,13 @@ namespace pizza_app
             //Price = p.Price;
 
 
-            //new Order(ID, Name, Description, new ObservableCollection<Toppings>(Topping), Price);
+            new Order(ID, Name, Description, new ObservableCollection<Toppings>(Topping), Price);
             ID = PizzaCopy.ID;
             Name = PizzaCopy.Name;
             Description = PizzaCopy.Description;
             Price = 50;
+
+
 
             foreach (var toppping in PizzaCopy.Topping)
             {
@@ -58,7 +63,7 @@ namespace pizza_app
 
         public object Clone()
         {
-            Order o = new Order(this.ID, this.Name, this.Description, this.Topping, this.Price);
+            Order o = new(this.ID, this.Name, this.Description, this.Topping, this.Price);
             return o;
         }
 

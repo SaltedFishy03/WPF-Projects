@@ -34,9 +34,10 @@ namespace pizza_app
 
         private void lb_pizza_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            mvm.Basket.Add(new Order().Clone() as Order);
+            Order o = new Order(dal.PizzaList[lb_pizza.SelectedIndex]).Clone() as Order;
+            mvm.Basket.Add(o);
 
-            //MessageBox.Show($"{lb_pizza.SelectedItem.GetHashCode()}");
+            MessageBox.Show($"{o.GetHashCode()}");
         }
 
 
@@ -50,7 +51,7 @@ namespace pizza_app
             {
                 if (l.Tag is Order o)
                 {
-                    // MessageBox.Show($"{lb_pizza.SelectedItem.GetHashCode()}");
+                    MessageBox.Show($"{lb_pizza.SelectedItem.GetHashCode()}");
 
                     if (lb_pizza.SelectedItem != side)
                     {

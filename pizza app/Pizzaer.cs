@@ -5,6 +5,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xaml;
 
 namespace pizza_app
 {
@@ -35,8 +36,11 @@ namespace pizza_app
             //}
         }
 
-
-
+        public object Clone()
+        {
+            Pizzaer p = new(ID, Name, Description, Topping, Price);
+            return p;
+        }
     }
 
 }
