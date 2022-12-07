@@ -37,7 +37,7 @@ namespace pizza_app
             Order o = new Order(dal.PizzaList[lb_pizza.SelectedIndex]).Clone() as Order;
             mvm.Basket.Add(o);
 
-            MessageBox.Show($"{o.GetHashCode()}");
+            //MessageBox.Show($"{o.GetHashCode()}");
         }
 
 
@@ -51,7 +51,7 @@ namespace pizza_app
             {
                 if (l.Tag is Order o)
                 {
-                    MessageBox.Show($"{lb_pizza.SelectedItem.GetHashCode()}");
+
 
                     if (lb_pizza.SelectedItem != side)
                     {
@@ -68,7 +68,10 @@ namespace pizza_app
                                 }
 
                                 ModifyPizza ModifyWindow = new(pizza);
-                                ModifyWindow.ShowDialog();
+                                if (ModifyWindow.ShowDialog() == true)
+                                {
+                                    mvm.Basket.Add((ModifyWindow.pizza.Clone() as Order));
+                                }
                                 break;
 
                             case MessageBoxResult.No:

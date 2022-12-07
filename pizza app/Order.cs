@@ -31,7 +31,6 @@ namespace pizza_app
 
         public ObservableCollection<Toppings> Topping { get; set; } = new();
 
-        private Order PizzaCopy;
 
 
         public Order(Pizzaer PizzaCopy)
@@ -43,7 +42,7 @@ namespace pizza_app
             //Price = p.Price;
 
 
-            new Order(ID, Name, Description, new ObservableCollection<Toppings>(Topping), Price);
+
             ID = PizzaCopy.ID;
             Name = PizzaCopy.Name;
             Description = PizzaCopy.Description;
@@ -53,6 +52,7 @@ namespace pizza_app
 
             foreach (var toppping in PizzaCopy.Topping)
             {
+                Topping.Add(toppping);
                 Description += toppping.Name;
                 Price += toppping.Price;
 
@@ -63,7 +63,17 @@ namespace pizza_app
 
         public object Clone()
         {
-            Order o = new(this.ID, this.Name, this.Description, this.Topping, this.Price);
+            ObservableCollection<Toppings> DeepCopyList(ObservableCollection<Toppings> a)
+            {
+                ObservableCollection<Toppings> t = new();
+
+                foreach (var item in t)
+                {
+                    t.Add((Toppings)item.Clone());
+                }
+                return t;
+            }
+            Order o = new(ID, Name, Description, Topping, Price);
             return o;
         }
 

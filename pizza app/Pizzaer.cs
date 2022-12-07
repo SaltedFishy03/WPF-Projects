@@ -38,7 +38,14 @@ namespace pizza_app
 
         public object Clone()
         {
-            Pizzaer p = new(ID, Name, Description, Topping, Price);
+
+            ObservableCollection<Toppings> t = new ObservableCollection<Toppings>();
+            foreach (var item in Topping)
+            {
+                t.Add((Toppings)item.Clone());
+            }
+
+            Pizzaer p = new(ID, Name, Description, t, Price);
             return p;
         }
     }
