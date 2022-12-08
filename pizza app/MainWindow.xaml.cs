@@ -17,7 +17,7 @@ namespace pizza_app
     {
         DAL dal = new();
         MainWindowViewModel mvm = new();
-
+        BuyViewModel bvm = new();
         public MainWindow()
         {
             InitializeComponent();
@@ -30,6 +30,9 @@ namespace pizza_app
         private void btn_buy_Click(object sender, RoutedEventArgs e)
         {
 
+            BuyPage PayWindow = new BuyPage();
+            PayWindow.ShowDialog();
+
         }
 
         private void lb_pizza_MouseDoubleClick(object sender, MouseButtonEventArgs e)
@@ -40,20 +43,38 @@ namespace pizza_app
             //MessageBox.Show($"{o.GetHashCode()}");
         }
 
+        private void SidesSizeChange(object sender, SelectionChangedEventArgs e)
+        {
+            ComboBox? c = sender as ComboBox;
+            if (c.Tag is Order o)
+            {
+                if (c.SelectedValue is SidesSize s)
+                {
+                    mvm.Basket.Add(new Order(o.ID, o.Name, string.Empty, s.Price));
+
+                }
+            }
+        }
 
         private void lb_basket_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
+
             Sides side = null;
             Pizzaer pizza = null;
             ListBoxItem? l = sender as ListBoxItem;
 
+            foreach (var s in dal.SidesList)
+            {
+
+                side = s;
+            }
             if (l != null)
             {
                 if (l.Tag is Order o)
                 {
 
 
-                    if (lb_pizza.SelectedItem != side)
+                    if (o.ID != side.ID)
                     {
                         MessageBoxResult result = MessageBox.Show("Tryk ja for at modificere din pizza og nej for at slette den. \n\nFor at fortryde tryk på anuller", "Modificer " + o.Name, MessageBoxButton.YesNoCancel);
                         switch (result)
@@ -103,18 +124,7 @@ namespace pizza_app
             }
         }
 
-        private void SidesSizeChange(object sender, SelectionChangedEventArgs e)
-        {
-            ComboBox? c = sender as ComboBox;
-            if (c.Tag is Order o)
-            {
-                if (c.SelectedValue is SidesSize s)
-                {
-                    mvm.Basket.Add(new Order(o.Name, string.Empty, s.Price));
 
-                }
-            }
-        }
     }
 }
 

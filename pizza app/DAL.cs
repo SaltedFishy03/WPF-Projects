@@ -38,12 +38,12 @@ namespace pizza_app.database
 
             PizzaList = new ObservableCollection<Pizzaer>
             {
-                new Pizzaer(1, "Magaritta", $"Dette er vores ostepizza, med", new ObservableCollection<Toppings> { ToppingList[0], ToppingList[1] }, 50),
-                new Pizzaer(2, "Peperoni", $"dettte er vores klasike peperonipizza, med", new ObservableCollection<Toppings> { ToppingList[0], ToppingList[2], ToppingList[1] }, 50),
-                new Pizzaer(3, "Ham", $"Dette er vores skinkepizza, med", new ObservableCollection<Toppings> { ToppingList[0], ToppingList[3], ToppingList[1] }, 50),
-                new Pizzaer(4, "Hawaii", $"Dette er vores Hawaiipizza, med", new ObservableCollection<Toppings> { ToppingList[0], ToppingList[3], ToppingList[6], ToppingList[1] }, 10),
-                new Pizzaer(5, "Salatpizza", $"Dette er vores salatpiizza, med", new ObservableCollection<Toppings> { ToppingList[0], ToppingList[4], ToppingList[1], ToppingList[7], ToppingList[8] }, 50),
-                new Pizzaer(6, "Kebabpizza", $"Dette er vores kebabpizza, med", new ObservableCollection<Toppings> { ToppingList[0], ToppingList[5], ToppingList[1] }, 50)
+                new Pizzaer(1, "Magaritta", $" Dette er vores ostepizza, med", new ObservableCollection<Toppings> { ToppingList[0], ToppingList[1] }, 50),
+                new Pizzaer(2, "Peperoni", $" Dettte er vores klasike peperonipizza, med", new ObservableCollection<Toppings> { ToppingList[0], ToppingList[2], ToppingList[1] }, 50),
+                new Pizzaer(3, "Ham", $" Dette er vores skinkepizza, med", new ObservableCollection<Toppings> { ToppingList[0], ToppingList[3], ToppingList[1] }, 50),
+                new Pizzaer(4, "Hawaii", $" Dette er vores Hawaiipizza, med", new ObservableCollection<Toppings> { ToppingList[0], ToppingList[3], ToppingList[6], ToppingList[1] }, 10),
+                new Pizzaer(5, "Salatpizza", $" Dette er vores salatpiizza, med", new ObservableCollection<Toppings> { ToppingList[0], ToppingList[4], ToppingList[1], ToppingList[7], ToppingList[8] }, 50),
+                new Pizzaer(6, "Kebabpizza", $" Dette er vores kebabpizza, med", new ObservableCollection<Toppings> { ToppingList[0], ToppingList[5], ToppingList[1] }, 50)
             };
 
             DrinksList = new ObservableCollection<SidesSize>
@@ -62,8 +62,8 @@ namespace pizza_app.database
 
             SidesList = new ObservableCollection<Sides>
             {
-                new Sides(1, "Cola", "Vælg flere forskellige størelser", DrinksList),
-                new Sides(2, "Pommes", "Vælg flere forskellige størelser", SideSizeList)
+                new Sides(7, "Cola", "Vælg flere forskellige størelser", DrinksList),
+                new Sides(7, "Pommes", "Vælg flere forskellige størelser", SideSizeList)
             };
 
         }

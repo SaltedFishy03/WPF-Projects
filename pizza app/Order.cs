@@ -110,8 +110,9 @@ namespace pizza_app
             Size = side.Sizes;
         }
 
-        public Order(string name, string destription, double price)
+        public Order(int id, string name, string destription, double price)
         {
+            ID = id;
             Name = name;
             Price = price;
             Description = destription;

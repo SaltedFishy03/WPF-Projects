@@ -18,10 +18,10 @@ namespace pizza_app
             Price = _price;
             Name = _name;
         }
-        public SidesSize(SidesSize s)
-        {
-            Price = s.Price;
-            Name = s.Name;
-        }
+        //public SidesSize(SidesSize s)
+        //{
+        //    Price = s.Price;
+        //    Name = s.Name;
+        //}
     }
 }
