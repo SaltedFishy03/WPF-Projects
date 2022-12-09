@@ -22,6 +22,7 @@ namespace pizza_app
     public partial class BuyPage : Window
     {
         BuyViewModel bvm = new();
+        MainWindowViewModel mvm = new();
 
         public BuyPage()
         {
@@ -31,12 +32,29 @@ namespace pizza_app
 
         private void DeleteFunktion(object sender, MouseButtonEventArgs e)
         {
+            MessageBoxResult result = MessageBox.Show("Har du lyst til at fjerne denne bestilling", "Fjern en bestilling", MessageBoxButton.YesNo);
 
+            switch (result)
+            {
+                case MessageBoxResult.Yes:
+                    mvm.Basket.Remove(mvm.Basket[lb_bestilling.SelectedIndex]);
+                    bvm.Buy.Remove(bvm.Buy[lb_bestilling.SelectedIndex]);
+                    break;
+
+                case MessageBoxResult.No:
+                    break;
+            }
         }
 
         private void btn_payment_Click(object sender, RoutedEventArgs e)
         {
+            string allPurchases = string.Empty;
+            foreach (var item in bvm.Buy)
+            {
+                allPurchases += $", {item.Name}";
+            }
 
+            MessageBox.Show("Du har nu købt" + allPurchases, "Dit køb", MessageBoxButton.OK, MessageBoxImage.Information);
         }
     }
 }

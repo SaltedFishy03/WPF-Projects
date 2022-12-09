@@ -29,10 +29,8 @@ namespace pizza_app
 
         private void btn_buy_Click(object sender, RoutedEventArgs e)
         {
-
-            BuyPage PayWindow = new BuyPage();
+            BuyPage PayWindow = new();
             PayWindow.ShowDialog();
-
         }
 
         private void lb_pizza_MouseDoubleClick(object sender, MouseButtonEventArgs e)
@@ -65,7 +63,6 @@ namespace pizza_app
 
             foreach (var s in dal.SidesList)
             {
-
                 side = s;
             }
             if (l != null)
@@ -91,13 +88,13 @@ namespace pizza_app
                                 ModifyPizza ModifyWindow = new(pizza);
                                 if (ModifyWindow.ShowDialog() == true)
                                 {
-                                    mvm.Basket.Add((ModifyWindow.pizza.Clone() as Order));
+                                    mvm.Basket.Add(ModifyWindow.vm.CustomPizza.Clone() as Order);
                                 }
                                 break;
 
                             case MessageBoxResult.No:
                                 mvm.Basket.Remove(o);
-                                MessageBox.Show("Du har nu fjernet " + o.Name);
+                                MessageBox.Show("Du har nu fjernet " + o.Name, "Fjen" + o.Name, MessageBoxButton.OK, MessageBoxImage.Information);
                                 break;
 
                             case MessageBoxResult.Cancel:
@@ -112,7 +109,7 @@ namespace pizza_app
 
                             case MessageBoxResult.Yes:
                                 mvm.Basket.Remove(o);
-                                MessageBox.Show("Du har nu fjernet " + o.Name);
+                                MessageBox.Show("Du har nu fjernet " + o.Name, "Fjern" + o.Name, MessageBoxButton.OK, MessageBoxImage.Information);
                                 break;
 
                             case MessageBoxResult.No:

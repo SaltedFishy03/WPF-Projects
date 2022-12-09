@@ -17,7 +17,7 @@ namespace pizza_app.ViewModels
         public ObservableCollection<Order> Buy
         {
             get { return _buy; }
-            set { _buy = value; }
+            set { _buy = value; OnPropertyChanged("Buy"); }
         }
 
         public BuyViewModel()
@@ -28,15 +28,7 @@ namespace pizza_app.ViewModels
             {
                 Buy.Add(mvm.Basket[i]);
             }
-            //foreach (Sides sides  in mvm.Basket)
-            //{
-            //    Buy.Add(new(sides));
-            //}
 
-            //foreach (var pizza in mvm.Basket)
-            //{
-            //    Buy.Add(pizza);
-            //}
         }
         public event PropertyChangedEventHandler? PropertyChanged;
         protected void OnPropertyChanged([CallerMemberName] string name = null)
