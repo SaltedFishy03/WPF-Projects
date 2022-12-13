@@ -38,15 +38,10 @@ namespace pizza_app.ViewModels
                 Orders.Add(new Order(dal.PizzaList[i]).Clone() as Order);
             }
 
-            //foreach (var pizza in dal.PizzaList)
-            //{
-            //    Orders.Add(new Order(pizza));
-            //}
-
             foreach (var sides in dal.SidesList)
             {
                 SideOrder.Add(new Order(sides));
-                //.Clone() as Order
+
             }
         }
 

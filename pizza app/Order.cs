@@ -73,8 +73,8 @@ namespace pizza_app
                 }
                 return t;
             }
-            Order o = new(ID, Name, Description, Topping, Price);
-            return o;
+            Order c = new(ID, Name, Description, Topping, Price);
+            return c;
         }
 
         #region commented
@@ -103,6 +103,7 @@ namespace pizza_app
         #region Constructors
         public Order(Sides side)
         {
+
             ID = side.ID;
             Name = side.Name;
             Description = side.Description;

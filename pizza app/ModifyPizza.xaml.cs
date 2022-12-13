@@ -25,16 +25,15 @@ namespace pizza_app
 
         MainWindowViewModel mvm = new();
         private ModifyPizzaViewModel vm;
-        public Pizzaer pizza { get; set; }
+        public Order pizza { get; set; }
         public DAL dal = new DAL();
 
-        public ModifyPizza(Pizzaer Pizza)
+        public ModifyPizza(Order Pizza)
         {
             InitializeComponent();
             pizza = Pizza;
             vm = new ModifyPizzaViewModel(pizza);
             vm.GetCustomPrice();
-
             DataContext = vm;
 
         }
@@ -43,7 +42,7 @@ namespace pizza_app
 
         private void lb_topping_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            vm.CustomPizza.Topping.Add(new Toppings(dal.ToppingList[lb_topping.SelectedIndex].ID, dal.ToppingList[lb_topping.SelectedIndex].Name, dal.ToppingList[lb_topping.SelectedIndex].Price));
+            vm.CustomPizza.Topping.Add(new Toppings(dal.ToppingList[lb_topping.SelectedIndex].ID, dal.ToppingList[lb_topping.SelectedIndex].Name, dal.ToppingList[lb_topping.SelectedIndex].Price).Clone() as Toppings);
 
             vm.GetCustomPrice();
         }
@@ -58,7 +57,6 @@ namespace pizza_app
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             pizza = vm.CustomPizza;
-            //vm.GetCustomPrice();
             DialogResult = true;
         }
 

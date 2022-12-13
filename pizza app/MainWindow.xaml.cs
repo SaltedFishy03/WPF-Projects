@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.ObjectModel;
+using System.Linq;
 using System.Runtime.InteropServices;
 using System.Windows;
 using System.Windows.Controls;
@@ -18,13 +19,13 @@ namespace pizza_app
         DAL dal = new();
         MainWindowViewModel mvm = new();
         BuyViewModel bvm = new();
+
         public MainWindow()
         {
             InitializeComponent();
             DataContext = mvm;
 
-            Uri iconUri = new Uri("https://media-exp1.licdn.com/dms/image/C4D03AQGXi3dwJ0rDCQ/profile-displayphoto-shrink_800_800/0/1651108360106?e=1674691200&v=beta&t=OFxipBWQAOBP2OhysdJUHwVaxz1N7G-FlSTVrcoRDEI", UriKind.RelativeOrAbsolute);
-            this.Icon = BitmapFrame.Create(iconUri);
+
         }
 
         private void btn_buy_Click(object sender, RoutedEventArgs e)
@@ -77,19 +78,38 @@ namespace pizza_app
                         switch (result)
                         {
                             case MessageBoxResult.Yes:
-                                foreach (var p in dal.PizzaList)
+                                //foreach (var p in dal.PizzaList)
+                                //{
+                                //    if (p.ID == o.ID)
+                                //    {
+                                //        pizza = p;
+                                //    }
+                                //}
+
+
+                                ModifyPizza ModifyWindow = new(o.Clone() as Order);
+                                if (ModifyWindow.ShowDialog() == true)
                                 {
-                                    if (p.ID == o.ID)
+
+                                    var t = mvm.Basket.Where(p => p.ID == o.ID).FirstOrDefault();
+
+                                    //Order t = null;
+                                    //foreach (var item in mvm.Basket)
+                                    //{
+                                    //    if (item.ID == o.ID)
+                                    //    {
+                                    //        t = o; 
+                                    //        break;
+                                    //    }
+                                    //}
+
+                                    if (t != null)
                                     {
-                                        pizza = p;
+                                        mvm.Basket.Remove(t);
+                                        mvm.Basket.Add(ModifyWindow.pizza);
                                     }
                                 }
 
-                                ModifyPizza ModifyWindow = new(pizza);
-                                if (ModifyWindow.ShowDialog() == true)
-                                {
-                                    mvm.Basket.Add(ModifyWindow.vm.CustomPizza.Clone() as Order);
-                                }
                                 break;
 
                             case MessageBoxResult.No:

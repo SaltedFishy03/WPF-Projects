@@ -7,12 +7,13 @@ namespace pizza_app.ViewModels
 {
     public partial class ModifyPizzaViewModel : ObservableObject
     {
-        [ObservableProperty] public Pizzaer _customPizza;
+        [ObservableProperty] public Order _customPizza;
         public DAL dal = new DAL();
 
         public ObservableCollection<Toppings> CustomToppings { get; set; }
 
-        public ModifyPizzaViewModel(Pizzaer pizza)
+
+        public ModifyPizzaViewModel(Order pizza)
         {
             CustomToppings = dal.ToppingList;
             CustomPizza = pizza;

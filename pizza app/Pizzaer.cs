@@ -45,7 +45,7 @@ namespace pizza_app
                 t.Add((Toppings)item.Clone());
             }
 
-            Pizzaer p = new(ID, Name, Description, t, Price);
+            Order p = new(ID, Name, Description, t, Price);
             return p;
         }
     }
