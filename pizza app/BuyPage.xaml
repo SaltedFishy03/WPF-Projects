@@ -4,8 +4,8 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:pizza_app" xmlns:viewmodels="clr-namespace:pizza_app.ViewModels" d:DataContext="{d:DesignInstance Type=viewmodels:BuyViewModel}"
-        mc:Ignorable="d"
-        Title="BuyPage" Height="450" Width="600">
+        mc:Ignorable="d" 
+        Title="BuyPage"  Height="450" Width="600" Background="Black" >
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -17,20 +17,24 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <Label Grid.Row="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" Content="DIN BESTILLING" FontSize="20"
+        <Label Grid.Row="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" Content="DIN BESTILLING" FontSize="20" Foreground="Wheat"
             FontWeight="Heavy" FontStyle="Italic"/>
 
-        <ListBox Name="lb_bestilling" Grid.Row="1" Grid.ColumnSpan="2" Width="400" Margin="5" ItemsSource="{Binding Buy}" MouseDoubleClick="DeleteFunktion">
-            <ListBox.ItemTemplate>
-                <DataTemplate>
-                    <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="{Binding Name}"  />
-                        <TextBlock Text="{Binding Price,                                  StringFormat=' - {0} kr'}"/>
-                    </StackPanel>
+        <Border Grid.Row="1" Grid.ColumnSpan="2" BorderThickness="3" BorderBrush="DarkOrange" CornerRadius="8">
+            <ListBox Background="Transparent" Foreground="Wheat" Name="lb_bestilling" Grid.Row="1" Grid.ColumnSpan="2" Width="400" Margin="5" ItemsSource="{Binding Buy}" MouseDoubleClick="DeleteFunktion">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Border BorderThickness="3" BorderBrush="DarkOrange" CornerRadius="8">
+                            <StackPanel Orientation="Horizontal" Width="380">
+                                <TextBlock Text="{Binding Name}"  />
+                                <TextBlock Text="{Binding Price,StringFormat=' - {0} kr'}"/>
+                            </StackPanel>
+                        </Border>
 
-                </DataTemplate>
-            </ListBox.ItemTemplate>
-        </ListBox>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </Border>
 
         <Button
             Grid.Column="1"
